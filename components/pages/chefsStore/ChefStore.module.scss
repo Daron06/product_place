@@ -1,0 +1,45 @@
+@import 'styles/media';
+
+.fullContainer {
+  display: flex;
+  margin: 0 auto;
+  padding: 0 130px;
+  width: 100%;
+  box-sizing: border-box;
+  @include phone-lg {
+    padding: 20px 0px;
+    display: block;
+    :global {
+      .slick-arrow {
+        display: none;
+      }
+    }
+  }
+}
+
+.sliderWrapper {
+  .cardItemLink {
+    display: block;
+    margin-right: 30px;
+  }
+}
+
+.sectionTitle {
+  @include phone-lg {
+    h3 {
+      font-size: 26px;
+    }
+  }
+}
+
+.mobilTitle {
+  display: none;
+  margin-top: 30px;
+  padding: 0 20px;
+  @include phone-lg {
+    display: block;
+  }
+  h4 {
+    font-size: 26px;
+  }
+}

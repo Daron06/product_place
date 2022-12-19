@@ -1,0 +1,107 @@
+.removeAvatar {
+  position: relative;
+  z-index: 1012;
+  cursor: pointer;
+}
+
+.avatarPlaceholder {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.wrapper {
+  position: relative;
+  border-radius: 50%;
+
+  > div {
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.2);
+      z-index: 0;
+      pointer-events: none;
+    }
+  }
+
+  :global {
+    .error-label {
+      text-align: center;
+    }
+  }
+  .removeBtnWr {
+    visibility: hidden;
+  }
+  &:hover {
+    .removeBtnWr {
+      visibility: visible;
+    }
+  }
+}
+
+.removeBtn {
+  position: absolute !important;
+  right: -15px;
+  top: -15px;
+}
+
+.avatarImg {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &:hover {
+    .avatarPlaceholder {
+      display: block !important;
+    }
+  }
+}
+
+.avatarLoader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.avatarImgLoading {
+  pointer-events: none;
+  &:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    animation: background-loading 1s ease-in-out infinite;
+  }
+}
+
+@keyframes background-loading {
+  0% {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  10% {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}

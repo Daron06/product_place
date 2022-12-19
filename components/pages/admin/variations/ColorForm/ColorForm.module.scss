@@ -1,0 +1,53 @@
+.selectColorFormInput {
+  width: 300px;
+  margin-right: 40px;
+
+  .selectColorHexInput {
+    margin-bottom: 20px;
+    > div {
+      display: flex;
+      border-radius: 8px;
+      border: 1px solid var(--color--gray-200);
+      height: 48px;
+      width: 100%;
+      font-size: 16px;
+      align-items: center;
+
+      > span {
+        padding-left: 15px;
+        color: gray;
+      }
+
+      > input {
+        border: none;
+        font-size: 16px;
+        padding: 0 5px;
+        resize: none;
+        width: 100%;
+      }
+    }
+
+    b {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 13px;
+    }
+  }
+}
+
+.colorVariant {
+  width: 25px;
+  height: 25px;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+.colorItem {
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+}
+
+.optionEditingFormActions {
+  grid-column: 2/4;
+  text-align: right;
+}

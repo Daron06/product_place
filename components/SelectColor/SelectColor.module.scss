@@ -1,0 +1,38 @@
+.selectColorForm {
+  display: flex;
+}
+
+.dropdownPopup {
+  padding: 0 !important;
+  ul {
+    padding: 0 !important;
+  }
+}
+
+.selectColorFormPicker {
+  margin-right: 40px;
+
+  b {
+    display: block;
+    margin-bottom: 8px !important;
+  }
+}
+
+.selectColorFormPickerValue {
+  height: 35px;
+  width: 35px;
+  border-radius: 8px;
+}
+
+.selectColorFormPickerValueEmpty {
+  border: 1px solid #f1f1f1;
+}
+
+.dropdownPickerItem {
+  display: flex;
+  align-items: center !important;
+
+  span {
+    margin-left: 10px;
+  }
+}

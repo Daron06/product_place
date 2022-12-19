@@ -1,0 +1,7 @@
+.counterItem {
+  margin-top: 0 !important;
+  padding: var(--spacing--20) 0;
+  &:not(:last-of-type) {
+    border-bottom: 1px solid var(--color--gray-200);
+  }
+}

@@ -1,0 +1,97 @@
+.formField {
+  margin-bottom: 20px;
+  position: relative;
+  b {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 13px;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    font-size: 16px;
+    resize: none;
+    border: 0;
+    padding-right: 15px;
+    &::placeholder {
+      font-size: 14px;
+    }
+  }
+
+  textarea {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    min-height: 100px;
+  }
+}
+
+html[lang='ar'] .formPhoneField {
+  direction: initial;
+  width: 225px;
+}
+
+.suffix {
+  position: absolute;
+  right: 10px;
+  top: 13px;
+  background-color: #fff;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 2px;
+}
+
+.suffixDisabled {
+  background-color: transparent;
+}
+
+.selectField {
+  margin-right: 5px;
+  > div {
+    margin-bottom: 0;
+    padding-left: 0;
+
+    :global {
+      .MuiInputBase-root {
+        border: none;
+        min-width: 66px;
+      }
+      .MuiPopover-paper {
+        width: 300px;
+      }
+      .MuiSelect-root {
+        display: flex;
+        align-items: center;
+        padding-left: 0;
+      }
+    }
+  }
+}
+
+.field {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid var(--color--gray-200);
+  padding-left: 15px;
+
+  input {
+    height: 48px;
+  }
+}
+
+.formFieldError {
+  color: red;
+  margin-top: 5px;
+  white-space: pre-line;
+}
+
+.prefix {
+  display: flex;
+  margin-top: 1px;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.4);
+  margin-right: 3px;
+}

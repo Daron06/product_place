@@ -1,0 +1,27 @@
+@import 'styles/media';
+
+.page {
+  padding: var(--spacing--40);
+  padding-right: 0;
+  width: 100%;
+  max-width: calc(100% - 243px);
+  @include phone-lg {
+    padding: 20px;
+    max-width: 100%;
+  }
+}
+
+.title {
+  @media (min-width: 1200px) {
+    margin-bottom: 40px;
+  }
+  h4 {
+    padding: 0;
+  }
+  @include phone-lg {
+    margin-bottom: 20px;
+    h4 {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,79 @@
+@import 'styles/media';
+
+.profileCoverPhoto {
+  width: 100%;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-position: center 10%;
+  }
+}
+
+.skeleton {
+  width: 600px;
+  height: 400px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.coverSliderWrapper {
+  .chefsTableSlider {
+    height: 55vh;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.05);
+
+    :global {
+      .slick-arrow {
+        top: calc(50% - 30px);
+        border-radius: 12px;
+
+        svg path {
+          stroke: var(--color--gray-900);
+        }
+      }
+
+      .slick-next {
+        right: var(--spacing--30);
+      }
+
+      .slick-prev {
+        left: var(--spacing--30);
+        z-index: 1;
+      }
+      @include phone-m {
+        .mobileSliderDots {
+          display: flex !important;
+          opacity: 1;
+        }
+      }
+    }
+    .mobileSliderDots {
+      display: flex !important;
+    }
+  }
+}
+
+.sliderItem {
+  padding: 0 1px;
+  height: 55vh;
+
+  & > div {
+    height: 100%;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center 10%;
+  }
+}
+
+html[lang='ar'] .chefsTableSlider {
+  :global {
+    .slick-next {
+      left: unset;
+    }
+  }
+}

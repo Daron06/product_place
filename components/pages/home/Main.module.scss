@@ -1,0 +1,224 @@
+@import '../../../styles/media';
+
+.mainPage {
+  padding-bottom: 60px;
+
+  @include phone-lg {
+    :global {
+      .slick-arrow {
+        display: none;
+      }
+    }
+  }
+}
+
+.cardItemLink {
+  display: block;
+  margin-right: 40px;
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin-top: 70px;
+  margin-bottom: 60px;
+}
+
+.section {
+  :global {
+    .container {
+      padding: 0 var(--spacing--40);
+
+      @include phone-lg {
+        padding: 0 var(--spacing--30);
+      }
+      @include phone-lg {
+        padding: 0 var(--spacing--20);
+      }
+    }
+  }
+}
+
+.sectionTitle {
+  position: relative;
+  top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 155px;
+  z-index: 2;
+  @include phone-lg {
+    margin-right: 0;
+  }
+  h3,
+  h2 {
+    @include phone-lg {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+  a {
+    -ms-flex: 0 0 100px;
+    flex: 0 0 100px;
+    max-width: 100px;
+    margin-top: 15px;
+    @include phone-lg {
+      margin-top: 2px;
+      -ms-flex: 0 0 20px;
+      flex: 0 0 20px;
+      max-width: 20px;
+    }
+  }
+}
+
+html[lang='ar'] .sectionTitle {
+  margin-right: 30px;
+  direction: rtl;
+}
+
+.hero {
+  position: relative;
+  margin-bottom: 120px;
+  padding-top: 110px;
+  display: block;
+  height: 320px;
+  background-color: var(--color--primary-main);
+  background-repeat: no-repeat;
+  background-position: 49vw 4vw;
+  background-size: 621px 447px;
+
+  @include laptop {
+    height: 381px;
+  }
+
+  @include tablets {
+    background-position: 55vw 10vw;
+  }
+
+  @include phone-lg {
+    margin: 80px 30px 0 30px;
+    border-radius: 30px;
+    padding-top: 10px;
+    padding-right: 10px;
+    height: 210px;
+    background-position: 14vw 23vw;
+  }
+
+  @include phone-s {
+    background-position: -11vw 46vw;
+  }
+}
+
+.heroHeader {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  margin: auto;
+  width: 100%;
+}
+
+.heroContainer {
+  padding: 0 35px;
+  @include tablets {
+    padding: 0 25px;
+  }
+}
+
+.heroTitleWrapper {
+  margin-top: 5px;
+  padding: 0 5px;
+  max-width: 600px;
+}
+
+.heroTitle {
+  font-weight: 700;
+  font-size: 3rem !important;
+  color: var(--color--black);
+  margin: 0;
+  line-height: 3rem;
+  letter-spacing: -0.8px;
+
+  @include tablets {
+    letter-spacing: -0.800000011920929px;
+  }
+
+  @include phone-lg {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    white-space: break-spaces;
+    margin-right: 10px;
+    line-height: 4rem;
+  }
+
+  @include phone-s {
+    font-size: 4rem !important;
+  }
+
+  @include phone-xs {
+    margin-top: 20px;
+    line-height: 4rem;
+    font-size: 4rem !important;
+  }
+}
+
+.heroText {
+  font-size: 1.5rem;
+  color: var(--color--black);
+  margin: 5px;
+  letter-spacing: 0px;
+  @include phone-lg {
+    white-space: break-spaces;
+    width: 200px;
+    font-size: 16px;
+  }
+
+  @include phone-xs {
+    margin-top: 5px;
+    font-size: 16px;
+  }
+}
+
+.chefsTableSection {
+  margin-bottom: 90px;
+  padding-top: 70px;
+  padding-bottom: 20px;
+}
+
+.graySection {
+  background-color: #f8f8f8;
+}
+
+.masterClassSection {
+  padding-top: 10px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.cardItemChefDescription {
+  margin-bottom: 15px !important;
+}
+
+.cardItemLarge {
+  min-width: 360px !important;
+}
+
+.cardItemImageLarge {
+  height: 235px !important;
+}
+
+.cardItemChefImage {
+  height: 290px !important;
+}
+
+.cardItemTitle {
+  font-size: 1.5rem !important;
+}
+
+.trendingCardItemImageHeight {
+  height: 170px !important;
+}

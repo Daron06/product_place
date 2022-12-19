@@ -1,0 +1,51 @@
+.connector {
+  background-color: var(--color--secondary-main) !important;
+  width: 1px !important;
+}
+
+.timeline {
+  padding: 0 !important;
+}
+
+.dot {
+  border-color: var(--color--secondary-main) !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding: 4px !important;
+  border-width: 6px !important;
+}
+
+.content {
+  padding-top: 0 !important;
+}
+
+.contentOpposite {
+  padding-left: 0 !important;
+  text-align: left !important;
+  padding-right: 0 !important;
+  flex: 0.6 !important;
+}
+
+.trackName {
+  font-weight: bold !important;
+  line-height: 20px !important;
+  font-size: 16px !important;
+}
+
+.trackDescription {
+  font-size: 14px !important;
+  margin-top: 3px !important;
+}
+
+.estimatedText {
+  margin-top: 30px;
+  margin-bottom: 0;
+
+  span {
+    color: #626262;
+  }
+}
+
+.modal {
+  max-width: 500px !important;
+}

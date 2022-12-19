@@ -1,0 +1,44 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: var(--color--secondary-main);
+  margin-bottom: 7px;
+  cursor: pointer;
+
+  svg {
+    position: relative;
+    top: 2px;
+    transition: all 0.23s ease;
+  }
+
+  &:hover {
+    svg {
+      transform: translateX(5px);
+    }
+  }
+}
+
+.text {
+  margin-right: 10px;
+  font-size: 16px;
+  color: currentColor;
+}
+
+html[lang='ar'] .text {
+  margin-right: 0px;
+  margin-left: 10px;
+}
+
+html[lang='ar'] .wrapper svg {
+  rotate: 180deg;
+}
+html[lang='ar'] .wrapperLink {
+  margin-right: 10px;
+}
+
+@media (min-width: 576px) {
+  html[lang='ar'] .wrapperLink {
+    margin-left: 130px;
+  }
+}

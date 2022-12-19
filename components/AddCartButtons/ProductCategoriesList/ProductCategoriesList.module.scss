@@ -1,0 +1,75 @@
+@import "styles/media";
+
+.category {
+  height: 50px !important;
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+  margin-right: var(--spacing--10) !important;
+
+  &:hover {
+    background-color: var(--color--secondary-main) !important;
+    border-color: inherit !important;
+
+    :local(.categoryLabel) {
+      color: #fff !important;
+    }
+
+    :local(.categoryIcon) {
+      path {
+        stroke: #fff !important;
+      }
+
+      &.meat, &.chocolate, &.tableware, &.sauces, &.veggie {
+        path {
+          stroke: none !important;
+          fill: #fff;
+        }
+      }
+    }
+  }
+
+  &.categoryChecked {
+    background-color: var(--color--secondary-main) !important;
+    border-color: inherit !important;
+
+    :local(.categoryLabel) {
+      color: #fff !important;
+    }
+
+    :local(.categoryIcon) {
+      path {
+        stroke: #fff !important;
+      }
+    }
+  }
+
+  .meat, .chocolate, .tableware, .sauces, .veggie {
+    path {
+      stroke: none !important;
+      fill: #47D7AC;
+    }
+  }
+}
+
+.categories {
+  @include phone-m {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-bottom: 10px !important;
+  }
+}
+
+.categoryLabel {
+  font-size: 1rem !important;
+  color: var(--color--secondary-main) !important;
+}
+
+.categoryIcon {
+  path {
+    stroke:  var(--color--secondary-main) !important;
+  }
+}
+
+.title {
+  font-weight: bold !important;
+}

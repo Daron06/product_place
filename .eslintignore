@@ -1,0 +1,24 @@
+# static files
+static/*
+
+# testing
+coverage/*
+
+# production
+build/*
+dist/*
+.next/*
+bundles/*
+
+cypress/*
+
+# misc
+.idea/*
+.vscode/*
+.documentation/*
+
+.eslintrc.js
+jest.config.js
+babel.config.js
+next.config.js
+internals/jest/fileMock.js

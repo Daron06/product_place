@@ -1,0 +1,46 @@
+.catsWrapper {
+  .sidebarTitle {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 110%;
+    color: #373737;
+    margin: 40px 0 20px 0;
+  }
+  .catsLink {
+    color: #373737;
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    color: #373737;
+    &:hover {
+      text-decoration: none;
+      color: #373737;
+    }
+    span {
+      margin-left: 10px;
+    }
+  }
+  .subUl {
+    margin-top: -5px;
+    display: none;
+    .catsLink {
+      font-weight: 400;
+      font-size: 14px;
+      padding-left: 45px;
+    }
+  }
+  .active {
+    .subUl {
+      display: block;
+    }
+  }
+  .avatar {
+    border-radius: 6px;
+  }
+  .arrow {
+    margin-left: auto;
+  }
+}

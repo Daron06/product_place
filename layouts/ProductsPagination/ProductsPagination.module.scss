@@ -1,0 +1,21 @@
+@import 'styles/media';
+
+html[lang="ar"] .pagination > div {
+  direction: ltr;
+}
+
+.pagination {
+  margin-bottom: var(--spacing--30);
+  padding: var(--spacing--30) 0;
+
+  @include phone-m {
+    flex-direction: column;
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+    h6 {
+      margin-top: 20px;
+      font-size: 16px !important;
+    }
+  }
+}

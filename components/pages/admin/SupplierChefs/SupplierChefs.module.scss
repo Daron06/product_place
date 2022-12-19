@@ -1,0 +1,15 @@
+@import "styles/mixins/flexbox";
+
+.root {
+  padding: 35px var(--spacing--30);
+}
+
+.rootTitle {
+  font-size: 1.625rem !important;
+  font-weight: bold !important;
+}
+
+.rootHeader {
+  @include flex($alignment: center, $justify-content: space-between);
+  margin-bottom: var(--spacing--20);
+}

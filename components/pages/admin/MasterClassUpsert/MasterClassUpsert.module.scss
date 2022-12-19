@@ -1,0 +1,29 @@
+.priceBlock {
+  position: relative;
+}
+
+.endAdornment {
+  position: absolute;
+  top: calc(50% - 10px);
+  right: 15px;
+  color: #a0a0a0 !important;
+}
+
+.startAdornment {
+  position: absolute;
+  top: calc(50% - 7px);
+  left: 15px;
+  color: #a0a0a0 !important;
+}
+
+.searchIcon {
+  width: 14px;
+  height: 14px;
+  fill: #e0e0e0;
+}
+
+.inputunknownPrice {
+  input {
+    padding-left: var(--spacing--40);
+  }
+}

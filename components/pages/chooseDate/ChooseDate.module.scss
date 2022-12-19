@@ -1,0 +1,40 @@
+@import 'styles/media';
+
+.chooseDate {
+  margin-bottom: 100px;
+
+  @include phone-m {
+    padding: 0 30px;
+
+    button {
+      font-size: 14px !important;
+    }
+  }
+}
+
+.pageTitle {
+  font-size: 42px;
+}
+
+.content {
+  margin: auto;
+  width: 100%;
+  max-width: 570px;
+}
+
+.filters {
+  margin-bottom: var(--spacing--30);
+  display: grid;
+  grid-template-columns: max-content 104px 75px;
+  column-gap: 10px;
+
+  @include phone-m {
+    display: flex;
+    overflow-x: auto;
+  }
+}
+
+html[lang='ar'] .indicator {
+  margin-left: unset;
+  margin-right: 12px;
+}

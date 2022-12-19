@@ -1,0 +1,32 @@
+@import 'styles/media';
+
+.chefs {
+
+  @media (min-width: 1200px) {
+    margin-bottom: 40px;
+  }
+}
+
+.chefsList {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -20px;
+  margin-left: -20px;
+
+  @include phone-m {
+    flex-direction: column;
+  }
+}
+
+.chefsSkeleton {
+  padding: 0 20px 20px;
+  width: 25%;
+  flex: 0 0 25%;
+ }
+
+.result {
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

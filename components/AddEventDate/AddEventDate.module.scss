@@ -1,0 +1,17 @@
+.controlsBtns {
+  display: flex;
+}
+
+.datepicker {
+  margin-right: var(--spacing--20);
+}
+
+.datepickerInput {
+  margin-bottom: 0;
+}
+
+.controlsBtns {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}

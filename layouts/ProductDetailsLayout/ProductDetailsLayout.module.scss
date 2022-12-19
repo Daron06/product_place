@@ -1,0 +1,280 @@
+@import 'styles/mixins/flexbox';
+@import 'styles/media';
+
+.container {
+  margin-bottom: 60px;
+  padding: var(--spacing--40);
+  position: relative;
+  @include phone-lg {
+    padding: 20px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  @include phone-lg {
+    flex-wrap: wrap;
+  }
+
+  h6 {
+    font-size: 14px;
+  }
+}
+
+.description {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.slider {
+  width: 100%;
+  max-width: 570px;
+  @include phone-lg {
+    width: auto;
+    max-width: calc(100% + 40px);
+    margin: 0 -20px;
+  }
+}
+
+html[lang='en'] .information {
+  @media (min-width: 1200px) {
+    margin-left: var(--spacing--40);
+  }
+}
+
+html[lang='ar'] .information {
+  @media (min-width: 1200px) {
+    margin-right: var(--spacing--40);
+  }
+}
+
+.information {
+  width: 100%;
+}
+
+.placeholder {
+  width: 100%;
+  max-width: 570px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    width: 100%;
+    max-width: 370px;
+    fill: var(--color--gray-200);
+  }
+}
+
+.sliderSkeleton {
+  margin-bottom: var(--spacing--20);
+  border-radius: var(--border--radius-16);
+}
+
+.thumbSliderSkeleton {
+  border-radius: var(--border--radius-8);
+
+  & + .thumbSliderSkeleton {
+    margin-left: 10px;
+  }
+}
+
+.notifSkeleton {
+  margin-bottom: var(--spacing--30);
+  border-radius: var(--border--radius-16);
+}
+
+.radiusSkeleton16 {
+  border-radius: var(--border--radius-16);
+}
+
+.radiusSkeleton8 {
+  border-radius: var(--border--radius-8);
+}
+
+.chefSkeleton {
+  margin-top: 65px;
+}
+
+.likeCount {
+  margin-bottom: 10px;
+  @include flex($alignment: center);
+}
+
+.likeCountIcon {
+  margin-right: 5px;
+  font-size: 17px;
+  display: inline-block;
+}
+
+.productTitle {
+  font-weight: 700 !important;
+}
+
+.productSubTitle {
+  color: var(--color--gray-600);
+}
+
+.productAdditionalIfoBox {
+  margin-bottom: var(--spacing--10);
+  @include flex($alignment: center);
+  border-top: 1px solid var(--color--gray-200);
+  border-bottom: 1px solid var(--color--gray-200);
+}
+
+.productAllergenItem {
+  & + .productAllergenItem {
+    margin-left: 10px;
+  }
+}
+
+html[lang='en'] .productDetailsTag {
+  padding: 15px var(--spacing--20) 15px 0;
+  border-right: 1px solid var(--color--gray-200);
+}
+
+html[lang='ar'] .productDetailsTag {
+  padding: 15px var(--spacing--20) 15px var(--spacing--20);
+  border-left: 1px solid var(--color--gray-200);
+  margin-left: var(--spacing--20);
+}
+
+.cuisineChip {
+  border: 0 !important;
+  background: var(--color--gray-100) !important;
+  pointer-events: none;
+}
+
+.menuItemAllergens {
+  padding-left: 15px;
+  @include flex($alignment: center);
+}
+
+.boldText {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.productAttentionInner {
+  padding: var(--spacing--20);
+  display: flex;
+  border: 1px solid var(--color--gray-200);
+  border-radius: var(--border--radius-16);
+  background-color: #fafafa;
+}
+
+.masterClassInfo {
+  margin-left: 10px;
+}
+
+.masterClassGoTo {
+  position: relative;
+}
+
+.masterClassTitle {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  color: var(--color--gray-900) !important;
+}
+
+.masterClassText {
+  font-size: 13px !important;
+  color: var(--color--gray-900) !important;
+}
+
+.addToCardButton {
+  max-width: 280px;
+}
+
+html[lang='ar'] .addToCardButton {
+  :global {
+    .MuiButton-label {
+      direction: ltr;
+    }
+  }
+}
+
+.totalLight {
+  display: inline-block;
+  padding-right: var(--spacing--20);
+  border-right: 1px solid var(--color--brow-text);
+  font-weight: normal !important;
+  font-size: 14px !important;
+  color: var(--color--brow-text) !important;
+  margin-right: var(--spacing--20);
+}
+
+.totalBold {
+  display: inline-block;
+  font-weight: bold !important;
+  font-size: 16px !important;
+  line-height: 20px;
+  text-align: center;
+  color: var(--color--brow-text) !important;
+}
+
+.buttonRoot {
+  padding: 0 !important;
+  min-width: 50px !important;
+}
+
+html[lang='en'] .buttonRoot {
+  margin-left: var(--spacing--20) !important;
+}
+
+html[lang='ar'] .buttonRoot {
+  margin-right: var(--spacing--20) !important;
+}
+
+.favoriteButtonLabelActive {
+  svg {
+    path:first-of-type {
+      animation: heart 0.45s cubic-bezier(0.17, 0.89, 0.32, 1.49);
+      fill: var(--color--secondary-main);
+      opacity: 1;
+    }
+  }
+}
+.buttonHeart {
+  width: 20px;
+  height: 20px;
+
+  path {
+    fill: transparent;
+    stroke-width: 8px;
+    stroke: var(--color--gray-900);
+  }
+}
+
+.productDetailsInformation {
+  margin-left: 70px;
+  width: 100%;
+}
+
+.avatar {
+  width: 62px !important;
+  height: 62px !important;
+}
+
+html[lang='ar'] .avatar {
+  margin-left: 15px;
+}
+
+.chefSign {
+  font-size: 13px;
+  margin-right: auto;
+  color: var(--color--gray-700);
+}
+
+.chefName {
+  font-weight: 600;
+  font-size: 16px;
+  margin-right: auto;
+  color: var(--color--gray-900);
+}
+
+.removeButton {
+  background-color: var(--color--gray-100) !important;
+  color: var(--color--gray-600) !important;
+}

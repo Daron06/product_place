@@ -1,0 +1,46 @@
+@import 'styles/media';
+
+.asidePaper {
+  padding-left: var(--spacing--10) !important;
+  padding-right: var(--spacing--10) !important;
+  border: 1px solid var(--color--gray-200);
+
+  @include phone-m {
+    span {
+      font-size: 14px !important;
+    }
+  }
+  .asideList {
+    li:last-child {
+      border-bottom: 0;
+    }
+  }
+  .listItem {
+    min-height: 56px;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 20px;
+    margin-left: 20px;
+    width: auto;
+  }
+}
+
+.textAlignRight {
+  text-align: right;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.asidePrice {
+  padding: 30px 20px 0 20px;
+}
+
+html[lang='ar'] .textAlignRight {
+  text-align: left;
+}
+html[lang='ar'] .textAlignLeft {
+  text-align: right;
+}

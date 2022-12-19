@@ -1,0 +1,89 @@
+.authModalRememberField {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.authModalGoBack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+
+  svg {
+    margin-right: 10px;
+  }
+}
+
+.authModalResetDescription {
+  margin-bottom: 25px;
+  margin-top: 0;
+}
+
+.authModalGoBackText {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+
+  img {
+    margin-right: 10px;
+  }
+}
+
+.authModalSeparator {
+  height: 1px;
+  background-color: #EEEEEE;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  span {
+    background-color: #fff;
+    padding: 0 18px;
+    position: relative;
+    top: -10px;
+  }
+}
+
+.authModalSocialButtons {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  width: 235px;
+  margin: 0 auto;
+  padding: 0;
+
+  button {
+    background-color: transparent;
+    border: 0;
+  }
+
+  img {
+    cursor: pointer;
+  }
+}
+
+.authModalSocialButtons {
+  button {
+    cursor: pointer;
+  }
+}
+
+.authModalBottomSignUp {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 0;
+
+  span {
+    font-size: 16px;
+  }
+}
+
+.circleProgressColor {
+  circle {
+    color: var(--color--brow-text);
+  }
+}

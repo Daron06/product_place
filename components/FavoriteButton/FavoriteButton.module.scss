@@ -1,0 +1,44 @@
+.favoriteButtonRoot {
+  height: 50px;
+}
+
+.favoriteButtonLabel {
+  position: relative;
+  color: #fff;
+  transition: all 1s cubic-bezier(0.17, 0.89, 0.32, 1.49);
+
+  svg {
+    path:first-of-type {
+      animation: heart 0.45s cubic-bezier(0.17, 0.89, 0.32, 1.49);
+      fill: black;
+      opacity: 0.2;
+    }
+  }
+}
+.favoriteButtonPage {
+  svg {
+    path:first-of-type {
+      fill: #fff;
+    }
+    path:last-of-type {
+      stroke: #373737;
+    }
+  }
+}
+
+.favoriteButtonLabelActive {
+  svg {
+    path:first-of-type {
+      animation: heart 0.45s cubic-bezier(0.17, 0.89, 0.32, 1.49);
+      fill: var(--color--secondary-main);
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes heart {
+  0%,
+  17.5% {
+    font-size: 0;
+  }
+}

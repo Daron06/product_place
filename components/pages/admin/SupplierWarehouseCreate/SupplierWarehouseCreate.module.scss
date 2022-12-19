@@ -1,0 +1,47 @@
+.selectColorFormInput {
+  width: 300px;
+}
+
+.addVariationButton {
+  height: 67px !important;
+  margin-bottom: 30px !important;
+}
+
+.blockActions {
+  opacity: 0;
+  position: absolute !important;
+  right: 30px;
+  top: 20px;
+  transition: opacity 0.15s ease-in-out;
+}
+
+.createNewVariationButton {
+  padding: 10px 20px !important;
+}
+
+.disabledRightSide {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.block {
+  &:hover {
+    .blockActions {
+      opacity: 1;
+    }
+  }
+}
+
+.optionEditingForm {
+  display: grid;
+  gap: 20px;
+}
+
+.optionEditingColumn {
+}
+
+.optionEditingFormActions {
+  grid-column: 2/4;
+  text-align: right;
+}

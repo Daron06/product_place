@@ -1,0 +1,56 @@
+@import 'styles/media';
+
+.colorBlock {
+  padding: var(--spacing--10);
+  height: max-content;
+  border: 1px solid var(--color--gray-200);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 25px !important;
+  min-width: 210px;
+  justify-content: space-between;
+
+  @include phone-m {
+    width: 100%;
+
+    p {
+      font-size: 14px !important;
+    }
+
+    :global {
+      .MuiSvgIcon-root {
+        width: 24px !important;
+        height: 24px !important;
+      }
+    }
+  }
+}
+
+.groupTitle {
+  font-size: 18px !important;
+  margin-left: -10px !important;
+}
+
+.color {
+  width: 35px;
+  height: 35px;
+  border-radius: var(--border--radius-8);
+}
+
+.selectable {
+  pointer-events: none;
+}
+
+.ml10 {
+  margin-left: 10px;
+}
+
+html[lang='ar'] .colorBlock {
+  margin-right: unset !important;
+  margin-left: 25px;
+}
+html[lang='ar'] .ml10 {
+  margin-left: unset;
+  margin-right: 10px;
+}

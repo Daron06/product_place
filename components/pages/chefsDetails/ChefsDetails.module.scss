@@ -1,0 +1,123 @@
+@import 'styles/media';
+
+.pageLoading {
+  width: 100%;
+}
+
+.mainInfo {
+  margin-top: var(--spacing--20);
+  margin-bottom: 60px;
+  display: flex;
+
+  @include phone-m {
+    margin-top: 90px;
+    margin-bottom: 20px !important;
+  }
+}
+
+.tabsContent {
+  margin-bottom: 80px;
+}
+
+.chefWorkingAvatars {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  :global {
+    .MuiAvatarGroup-avatar {
+      width: 43px !important;
+      height: 43px !important;
+    }
+  }
+}
+
+.chefDescription {
+  font-size: 16px !important;
+}
+
+.avatar {
+  width: 367px !important;
+  height: 367px !important;
+  border: 5px solid #fff;
+
+  @include phone-m {
+    width: 220px !important;
+    height: 220px !important;
+  }
+}
+
+html[lang='ar'] .avatarWrapper {
+  margin-left: var(--spacing--40);
+}
+
+html[lang='en'] .avatarWrapper {
+  margin-right: var(--spacing--40);
+}
+
+.avatarWrapper {
+  margin-top: -12%;
+  align-self: flex-start;
+
+  @include phone-m {
+    position: absolute;
+    top: 26%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-right: 0 !important;
+  }
+
+  :global {
+    .MuiSkeleton-root {
+      border: 5px solid #fff;
+      background: rgb(227, 227, 227);
+    }
+  }
+}
+
+.name {
+  margin-bottom: 10px !important;
+  font-size: 43px !important;
+  font-weight: bold !important;
+  @include phone-lg {
+    font-size: 24px !important;
+  }
+}
+
+.subtitle {
+  margin-bottom: 15px !important;
+  color: var(--color--gray-700) !important;
+
+  @include phone-m {
+    font-size: 14px !important;
+  }
+}
+
+.lightText {
+  color: var(--color--gray-700) !important;
+}
+
+.socialList {
+  margin-left: -11px;
+}
+
+.socialIcon {
+  width: 24px;
+  height: 24px;
+  fill: var(--color--gray-900);
+}
+
+.favorite {
+  width: 22px;
+  height: 22px;
+
+  path {
+    fill: transparent;
+    stroke-width: 8px;
+    stroke: var(--color--gray-900);
+  }
+}
+
+html[lang='ar'] .indicator {
+  margin-left: unset;
+  margin-right: 12px;
+}

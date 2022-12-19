@@ -1,0 +1,111 @@
+.formWrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 875px;
+}
+
+.info {
+  width: 590px;
+}
+
+.submitButton {
+  padding: 15px 40px !important;
+  font-size: 14px !important;
+}
+
+.adminTable {
+  :global {
+    .MuiTableCell-root {
+      padding: 0 !important;
+    }
+  }
+
+  .adminTableOrder {
+    svg {
+      margin-right: 9px;
+    }
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0px;
+  }
+}
+
+.accounting {
+  display: flex;
+
+  .accountingOrders {
+    width: 650px;
+    margin-right: 30px;
+
+    padding: 20px 20px 30px 20px;
+
+    > p {
+      margin: 0;
+      margin-bottom: 10px;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 20px;
+      letter-spacing: 0px;
+    }
+  }
+
+  .accountingBalance {
+    width: 310px;
+
+    p {
+      margin: 0;
+    }
+
+    > div {
+      padding: 20px;
+    }
+
+    .titleBalance {
+      padding-bottom: 20px;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 20px;
+      letter-spacing: 0px;
+    }
+
+    .balance {
+      padding-bottom: 15px;
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 29px;
+      letter-spacing: -0.5px;
+      padding-bottom: 20px;
+      color: var(--color--green-100);
+    }
+
+    .totalText {
+      padding-bottom: 7px;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 12px;
+      letter-spacing: 0em;
+      opacity: 0.7;
+    }
+
+    .total {
+      font-size: 16px;
+    }
+
+    .balanceFooter {
+      display: flex;
+      > span {
+        padding-left: 10px;
+        font-size: 13px;
+        line-height: 18px;
+
+        opacity: 0.7;
+      }
+
+      svg {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}

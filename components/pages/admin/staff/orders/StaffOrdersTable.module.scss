@@ -1,0 +1,10 @@
+.orderBadge {
+  padding-left: 20px;
+  margin-bottom: 12px;
+  > span {
+    display: flex;
+    background-color: #f0f0f0;
+    height: unset;
+    padding: 5px;
+  }
+}

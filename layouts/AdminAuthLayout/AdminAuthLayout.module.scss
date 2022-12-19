@@ -1,0 +1,46 @@
+@import '../../styles/media';
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--color--gray-0) !important;
+}
+
+.footerLightText {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  opacity: 0.7;
+}
+
+.footerText {
+  > a {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-decoration: underline;
+  }
+}
+
+.footerBottom {
+  margin-top: 120px;
+  border-top: 1px solid #eeeeee;
+  @include phone-m {
+    margin-top: 50px;
+  }
+}
+
+.footerSpan {
+  @include phone-m {
+    display: block;
+    text-align: center;
+  }
+  h6:first-child {
+    @include phone-m {
+      margin-bottom: 10px;
+    }
+  }
+}

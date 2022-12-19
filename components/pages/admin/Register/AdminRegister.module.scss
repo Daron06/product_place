@@ -1,0 +1,35 @@
+@import 'styles/mixins/card';
+@import 'styles/media';
+
+.wrapper {
+  margin: 40px auto;
+  width: 100%;
+  max-width: 650px;
+
+  @include tablets {
+    margin: 0  auto;
+  }
+}
+
+.formWrapper {
+  width: 100%;
+  max-width: 365px;
+  margin: 0 auto;
+
+  h6 {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+}
+
+.formField {
+  margin-bottom: 20px;
+}
+
+.submitButton {
+  display: block;
+  height: 50px;
+  width: 100%;
+  margin-top: 20px !important;
+}

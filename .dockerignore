@@ -1,0 +1,11 @@
+node_modules
+.build 
+.next
+.storybook
+.vscode
+.editorconfig
+.env*
+.eslint*
+.git*
+cypress.json
+cypress

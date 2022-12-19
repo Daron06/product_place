@@ -1,0 +1,67 @@
+@import 'styles/media';
+
+.settings {
+  width: 773px;
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 35px 30px 40px;
+
+  @include phone-m {
+    width: 100%;
+    padding: 30px;
+  }
+
+  :global {
+    .MuiFormGroup-root {
+      flex-direction: row;
+    }
+  }
+}
+
+.nameField {
+  display: flex;
+  > div {
+    width: 100%;
+  }
+  > div:first-child {
+    margin-right: 20px;
+    @include phone-m {
+      margin-right: 0;
+    }
+  }
+
+  @include phone-m {
+    flex-wrap: wrap;
+  }
+}
+
+html[lang='ar'] .nameField > div:first-child {
+  margin-right: unset;
+  margin-left: 20px;
+}
+
+html[lang='ar'] .MuiFormGroup-root > label:first-child {
+  margin-right: 0 !important;
+}
+
+.formField {
+  margin-bottom: 20px;
+}
+.password {
+  margin-top: 23px;
+  width: 347px;
+
+  @include phone-m {
+    width: 100%;
+  }
+}
+.submitButton {
+  display: block;
+  height: 50px;
+  width: 150px;
+  margin-top: 20px !important;
+}
+
+html[lang='ar'] .submitButton {
+  width: auto;
+}

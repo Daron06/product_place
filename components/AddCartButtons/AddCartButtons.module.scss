@@ -1,0 +1,36 @@
+.buy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0 20px;
+  padding: 0 20px;
+}
+
+.buyPrice {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.button {
+  svg {
+    font-size: 22px !important;
+  }
+}
+
+.buyCount {
+  display: flex;
+  align-items: center;
+
+  svg {
+    path {
+      fill: var(--color--brow-text) !important;
+    }
+  }
+
+  b {
+    font-size: 18px;
+    min-width: 20px;
+    margin: 0 6px;
+    text-align: center;
+  }
+}

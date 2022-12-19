@@ -1,0 +1,27 @@
+.filterPopup {
+  width: 310px !important;
+
+  :global {
+    .content {
+      box-sizing: content-box;
+    }
+
+    .MuiInput-root {
+      width: 100% !important;
+    }
+  }
+}
+
+.search {
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.searchIcon {
+  margin-right: 10px;
+  width: 15px;
+  height: 15px;
+
+  svg {
+    fill: var(--color--gray-900)
+  }
+}

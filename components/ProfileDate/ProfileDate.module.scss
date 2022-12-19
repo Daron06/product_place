@@ -1,0 +1,37 @@
+.root {
+  display: flex;
+  align-items: flex-start;
+
+  .chipWrapper {
+    margin-left: 10px;
+    border: 1px solid var(--color--gray-200);
+    height: 48px;
+    padding-left: 12px;
+  }
+}
+
+html[lang='ar'] .root .chipWrapper {
+  margin-left: unset;
+  padding-left: unset;
+  padding-right: 12px;
+  margin-right: 10px;
+}
+html[lang='ar'] .root .chipWrapper > span {
+  padding-left: 0;
+}
+html[lang='ar'] .root .chipWrapper > svg {
+  margin-right: 6px;
+}
+
+.calendar {
+  margin-top: 23px;
+}
+
+.dateFilterPaper {
+  width: 370px !important;
+  max-height: max-content !important;
+}
+
+.datePopoverBody {
+  max-height: max-content !important;
+}

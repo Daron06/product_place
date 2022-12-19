@@ -1,0 +1,64 @@
+.staffOrderInfoTable {
+  border-radius: var(--border--radius-16);
+  overflow: hidden;
+}
+
+.headText {
+  font-weight: 600 !important;
+  font-size: 12px !important;
+}
+
+.detailsGrid {
+  margin-top: var(--spacing--20);
+  column-count: 2;
+  gap: var(--spacing--20);
+
+  & > div {
+    margin: 0;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    margin-bottom: 20px;
+    break-inside: avoid;
+  }
+}
+
+.ordersSelect {
+  :global {
+    [data-value='pending'] {
+      pointer-events: none;
+      background-color: transparent !important;
+      color: #8d8d8d;
+    }
+  }
+}
+
+.mapModal {
+  height: calc(100vh - 200px);
+
+  div[class*="mapContainer"] {
+    height: calc(100% - 20px) !important;
+  }
+}
+
+.statusText {
+  margin-bottom: 7px;
+  margin-top: 5px;
+}
+
+.onlineLink {
+  margin-bottom: 20px;
+  text-decoration: underline;
+  font-size: 20px;
+  color: #1cbd8d;
+}
+
+.orderBadge {
+  padding-left: 20px;
+  margin: 0 15px 5px 0;
+  > span {
+    display: flex;
+    background-color: #f0f0f0;
+    height: unset;
+    padding: 5px;
+  }
+}

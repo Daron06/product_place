@@ -1,0 +1,22 @@
+@import 'styles/media';
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 370px;
+  column-gap: var(--spacing--40);
+
+  aside {
+    margin-top: 60px;
+  }
+
+  @include phone-m {
+    display: block !important;
+  }
+  :global {
+    .redactorSection {
+      li {
+        list-style-type: unset;
+      }
+    }
+  }
+}

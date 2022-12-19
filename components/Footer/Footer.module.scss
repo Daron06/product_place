@@ -1,0 +1,172 @@
+@import 'styles/media';
+
+.footer {
+  flex-shrink: 0;
+  background-color: var(--color--gray-0);
+
+  @include phone-m {
+    font-size: 14px;
+    a {
+      font-size: 14px;
+    }
+  }
+}
+
+.footerCener {
+  padding: 40px 0 0;
+  @include phone-m {
+    padding: 0;
+  }
+}
+.footerTop {
+  border-bottom: 1px solid var(--color--gray-200);
+  @include phone-m {
+    padding: 0;
+  }
+}
+
+.socialLinks {
+  margin-left: auto;
+  margin-right: 200px;
+}
+
+.footerAppsLinks {
+  display: flex;
+  a {
+    margin-left: 20px;
+    display: block;
+    height: 65px;
+    @include phone-lg {
+      margin-left: 0;
+      margin-right: 20px;
+      height: 45px;
+    }
+  }
+}
+
+.footerList {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style-type: none;
+
+    & + li {
+      margin-top: 15px;
+    }
+  }
+}
+
+.footerItem {
+  color: var(--color--gray-700);
+  transition: all 0.25s ease;
+
+  &:hover {
+    color: var(--color--gray-900);
+  }
+}
+
+.footerTitle {
+  font-weight: 700 !important;
+
+  @include phone-m {
+    font-size: 18px !important;
+  }
+}
+
+.footerBottom {
+  border-top: 1px solid var(--color--gray-200);
+  margin: 40px 10px 0;
+  @include phone-lg {
+    padding: 0;
+  }
+
+  @include phone-m {
+    margin: 10px 0 60px 0;
+  }
+}
+.links {
+  padding: 30px 0;
+  h6 {
+    font-size: 14px !important;
+  }
+  @include phone-lg {
+    display: block;
+    padding: 20px;
+    > div,
+    > h4 {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.footerInfo {
+  display: flex;
+  margin: 10px;
+
+  @include phone-m {
+    flex-direction: column;
+    margin: 30px;
+  }
+}
+
+.footerAbout {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+
+  @include phone-m {
+    margin: 10px 0;
+    flex-direction: column;
+  }
+}
+
+.footerunknown {
+  display: flex;
+  flex-direction: column;
+
+  @include phone-m {
+    display: none;
+  }
+}
+
+html[dir='rtl'] .footerunknown {
+  margin-left: auto;
+}
+html[dir='rtl'] .footerItem .phone {
+  direction: initial;
+  display: inline-block;
+}
+
+.footerIcon {
+  display: inline-block;
+
+  & + .footerIcon {
+    margin-left: 20px;
+  }
+
+  svg {
+    width: 27px;
+    height: 27px;
+    fill: var(--color--gray-400);
+    transition: all 0.25s ease;
+
+    &:hover {
+      fill: var(--color--secondary-main);
+    }
+  }
+}
+
+.footerLightText {
+  color: var(--color--gray-700);
+  > a {
+    text-decoration: underline;
+  }
+}
+.footerPartner {
+  a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+}

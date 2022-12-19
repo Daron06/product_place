@@ -1,0 +1,97 @@
+@import "styles/mixins/flexbox";
+
+.workingExperience {
+  border-bottom: 1px solid var(--color--gray-200);
+  padding-bottom: 20px;
+  margin-top: 20px;
+
+  input {
+    border: 0;
+    width: 300px;
+  }
+
+}
+
+.workingExperienceAvatarEmpty {
+  @include flex($alignment: center, $justify-content: center);
+  border-radius: 30px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--color--gray-200);
+  cursor: pointer;
+
+  &:hover {
+    border-color: darken(#EEEEEE, 3%);
+  }
+
+  svg {
+    width: 16.8px;
+    height: 14.8px;
+  }
+}
+
+.workingExperienceAvatar {
+  position: relative;
+  display: block;
+  border-radius: 30px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.workingExperienceCompanyName {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.workingExperienceCompanyPosition {
+  font-size: 14px;
+}
+
+.workingExperienceInputs {
+  @include flex($direction: column);
+  margin-left: 10px;
+}
+
+.workingExperienceAction {
+  display: flex;
+
+  svg {
+    display: block;
+    margin-left: 15px;
+    cursor: pointer;
+  }
+
+  :global {
+    .removeIcon {
+      path {
+        stroke: #A0A0A0;
+      }
+    }
+  }
+}
+
+.workingExperienceInfo {
+  @include flex($alignment: center);
+
+  .removeIcon {
+    position: absolute;
+    background-color: #fff;
+    height: 18px;
+    width: 18px;
+    border-radius: 30px;
+    text-align: center;
+    line-height: 23px;
+    z-index: 1;
+    right: -4px;
+    top: -4px;
+  }
+}
+
+.workingExperienceBlock {
+  @include flex($alignment: center, $justify-content: space-between);
+}
+
+.errorLabel {
+  color: red;
+}

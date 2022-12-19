@@ -1,0 +1,24 @@
+@import 'styles/mixins/card';
+@import 'styles/media';
+
+.wrapper {
+  margin: 40px auto;
+  width: 100%;
+  max-width: 446px;
+
+  @include tablets {
+    margin: 0 auto;
+  }
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  :global {
+    .MuiCheckbox-root {
+      padding: 9px !important;
+    }
+  }
+}
+
+

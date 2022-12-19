@@ -1,0 +1,52 @@
+@import "../../../styles/media";
+
+.root {
+  position: relative;
+  img {
+    width: 100%;
+    height: 308px;
+    border-radius: 16px;
+  }
+
+  .bannerTextBlock {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 40px;
+    color: #fff;
+
+    p {
+      font-weight: 700;
+      font-size: 42px;
+      margin: 0 0 7px 0;
+    }
+
+    span {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 130%;
+    }
+  }
+
+  @include desktop {
+    img {
+      height: 196px;
+    }
+  }
+
+  @include phone-lg {
+    img {
+      height: 149px !important;
+      border-radius: none !important;
+    }
+
+    p {
+      font-size: 26px !important;
+    }
+
+    span {
+      font-size: 18px !important;
+    }
+  }
+}

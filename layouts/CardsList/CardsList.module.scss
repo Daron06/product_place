@@ -1,0 +1,53 @@
+@import 'styles/media';
+
+.cards {
+  margin-bottom: var(--spacing--30);
+}
+
+.cardsList {
+  display: flex;
+  flex-wrap: wrap;
+
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(22rem, var(--card--item--width)));
+    gap: var(--spacing--40);
+  }
+  @include tablets {
+    --card--item--width: 20rem;
+  }
+
+  @include phone-m {
+    display: block;
+
+    div[class*='cardItem__'] {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.categoryList {
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 14.5rem));
+    gap: var(--spacing--40);
+  }
+  @include tablets {
+    --card--item--width: 10rem;
+  }
+
+  @include phone-m {
+    display: block;
+
+    div[class*='cardItem__'] {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.result {
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

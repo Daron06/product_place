@@ -1,0 +1,121 @@
+@import 'components/CartDrawer/CartDrawer.module.scss';
+@import 'styles/media';
+
+.lightText {
+  color: var(--color--gray-700) !important;
+}
+
+.order {
+  position: relative;
+  @include phone-m {
+    margin-top: 15px;
+  }
+}
+
+.blockTitle {
+  @include phone-m {
+    font-size: 24px !important;
+  }
+}
+
+.orderAvatar {
+  margin-right: 7px;
+  width: 25px !important;
+  height: 25px !important;
+}
+
+.orderHead {
+  padding: 4px 10px;
+  position: absolute;
+  top: -17px;
+  left: 14px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+
+  @include phone-m {
+    position: static;
+    padding: 0 0 10px;
+    border-bottom: 1px solid var(--color--gray-100);
+  }
+}
+
+.orderTitle {
+  font-size: 0.75rem !important;
+}
+
+.orderList {
+  margin-top: var(--spacing--40);
+  padding-top: var(--spacing--20);
+  padding-left: var(--spacing--10);
+  padding-right: var(--spacing--10);
+  border: 1px solid var(--color--gray-200);
+  border-radius: 12px;
+
+  @include phone-m {
+    padding: 0;
+    margin-top: 10px;
+    border: 0;
+  }
+
+  li {
+    min-width: 100%;
+    @include phone-m {
+      padding: 0;
+    }
+  }
+
+  li:last-child {
+    display: none;
+  }
+
+  :global {
+    .MuiDivider-root {
+      margin-left: 0;
+      margin-bottom: 10px !important;
+    }
+  }
+}
+
+.cartItemInfo {
+  display: flex;
+  margin-right: 15px;
+
+  @include phone-m {
+    display: flex;
+    flex-direction: column;
+  }
+  :global(& + .cartRemoveItem) {
+    margin-left: auto;
+  }
+}
+
+.pr40 {
+  padding-right: 40px;
+}
+.mr50 {
+  margin-right: 50px;
+}
+.ml15 {
+  margin-left: 15px;
+}
+html[lang='ar'] .pr40 {
+  padding-right: unset;
+  padding-left: 40px;
+}
+html[lang='ar'] .mr50 {
+  margin-right: unset;
+  margin-left: 50px;
+}
+html[lang='ar'] .ml15 {
+  margin-left: unset;
+  margin-right: 15px;
+}
+html[lang='ar'] .orderAvatar {
+  margin-right: unset;
+  margin-left: 7px;
+}
+html[lang='ar'] .cartItemInfo {
+  margin-right: unset;
+  margin-left: 15px;
+}

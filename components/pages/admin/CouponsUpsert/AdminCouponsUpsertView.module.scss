@@ -1,0 +1,67 @@
+.root {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  align-items: flex-start;
+  column-gap: var(--spacing--30);
+  row-gap: var(--spacing--20);
+}
+
+.rootSection {
+  grid-column: 1/4;
+}
+
+.rootAside {
+  display: grid;
+  grid-template-rows: max-content;
+  row-gap: var(--spacing--20);
+  align-items: self-start;
+}
+
+.generateCouponWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.couponTypeValue {
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  > div {
+    margin-left: 13px;
+    width: 150px;
+  }
+}
+
+.maxCountUses {
+  width: 278px;
+}
+
+.generateCouponButton {
+  border: 1px solid #47d7ac;
+  box-sizing: border-box;
+  border-radius: 12px;
+  padding: 14px;
+  background-color: #fff;
+  cursor: pointer;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #1cbd8d;
+  transition: border 0.1s, color 0.1s;
+
+  margin-left: 13px;
+
+  &:hover {
+    color: #1bac80;
+    border: 1px solid #1bac80;
+  }
+
+  &:active {
+    color: #27dfa7;
+    border: 1px solid #27dfa7;
+  }
+}

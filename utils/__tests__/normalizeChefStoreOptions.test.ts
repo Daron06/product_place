@@ -1,0 +1,140 @@
+import { normalizeChefStoreOptions } from '../normalizers/normalizeChefStoreOptions';
+
+const data = [
+  {
+    id: 825,
+    price: 100,
+    supplierPrice: '55.00',
+    msrpPrice: '0.00',
+    chefPrice: '0.00',
+    sku: '97345',
+    inventory: '1',
+    option: {
+      id: 99,
+      name: 'Red',
+      slug: '',
+      price: 399,
+      multiplier: 1,
+      color: '#ff2727',
+      category: {
+        id: 30,
+        slug: 'supercolors',
+        name: 'Super colors',
+        description: null,
+        type: 'color',
+        selectColor: false,
+        status: 'active',
+      },
+    },
+  },
+  {
+    id: 824,
+    price: 200,
+    supplierPrice: '2.00',
+    msrpPrice: '0.00',
+    chefPrice: '0.00',
+    sku: '97345',
+    inventory: '1',
+    option: {
+      id: 100,
+      name: 'Green',
+      slug: '',
+      price: 555,
+      multiplier: 1,
+      color: '#43ff00',
+      category: {
+        id: 30,
+        slug: 'supercolors',
+        name: 'Super colors',
+        description: null,
+        type: 'color',
+        selectColor: false,
+        status: 'active',
+      },
+    },
+  },
+  {
+    id: 823,
+    price: 300,
+    supplierPrice: '1.00',
+    msrpPrice: '0.00',
+    chefPrice: '0.00',
+    sku: '97345',
+    inventory: '1',
+    option: {
+      id: 101,
+      name: 'Blue',
+      slug: '',
+      price: 54,
+      multiplier: 1,
+      color: '#397dff',
+      category: {
+        id: 30,
+        slug: 'supercolors',
+        name: 'Super colors',
+        description: null,
+        type: 'color',
+        selectColor: false,
+        status: 'active',
+      },
+    },
+  },
+  {
+    id: 826,
+    price: 400,
+    supplierPrice: '555.00',
+    msrpPrice: '0.00',
+    chefPrice: '0.00',
+    sku: '97345',
+    inventory: '1',
+    option: {
+      id: 184,
+      name: '123',
+      slug: '',
+      price: 12,
+      multiplier: 1,
+      color: '#f00',
+      category: {
+        id: 50,
+        slug: 'test12345',
+        name: 'test12345',
+        description: null,
+        type: 'size',
+        selectColor: false,
+        status: 'active',
+      },
+    },
+  },
+];
+
+describe('Check normalizeChefStoreOptions', () => {
+  it('Check with all params', () => {
+    const normalized = normalizeChefStoreOptions(data);
+    expect(normalized).toEqual([
+      {
+        id: 30,
+        slug: 'supercolors',
+        name: 'Super colors',
+        description: null,
+        type: 'color',
+        selectColor: false,
+        status: 'active',
+        options: [
+          { id: 99, option_id: 99, name: 'Red', slug: '', price: 55, supplierPrice: 55, color: '#ff2727' },
+          { id: 100, option_id: 100, name: 'Green', slug: '', price: 2, supplierPrice: 2, color: '#43ff00' },
+          { id: 101, option_id: 101, name: 'Blue', slug: '', price: 1, supplierPrice: 1, color: '#397dff' },
+        ],
+      },
+      {
+        id: 50,
+        slug: 'test12345',
+        name: 'test12345',
+        description: null,
+        type: 'size',
+        selectColor: false,
+        status: 'active',
+        options: [{ id: 184, option_id: 184, name: '123', slug: '', price: 555, supplierPrice: 555, color: '#f00' }],
+      },
+    ]);
+  });
+});

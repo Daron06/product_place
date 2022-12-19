@@ -1,0 +1,407 @@
+@import 'styles/mixins/flexbox';
+@import 'styles/media';
+
+.root {
+  --header--vertical-padding: var(--spacing--30);
+}
+
+.header {
+  position: relative;
+  height: 80px;
+  @include flex($alignment: center);
+  border-top: 1px solid var(--color--gray-200);
+  box-shadow: 7px 4px 10px rgba(0, 0, 0, 0.04);
+
+  @include tablets {
+    height: 80px;
+  }
+}
+
+.headerLogo {
+  padding: 0 var(--spacing--20);
+}
+
+.logo {
+  position: relative;
+  left: 7px;
+  top: 1px;
+  width: 100px;
+  height: 30px;
+  display: block;
+  @include phone-m {
+    width: 80px;
+    height: 24px;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.headerMain {
+  padding-left: var(--spacing--20);
+  padding-right: var(--header--vertical-padding);
+  width: 100%;
+  display: flex;
+}
+
+.headerSearch {
+  padding: 0 15px;
+  height: 44px;
+  border: 1px solid var(--color--gray-200);
+  border-radius: 12px;
+}
+
+.headerSearchIcon {
+  margin-right: var(--spacing--10);
+  width: 15px;
+  height: 15px;
+}
+
+.notification {
+  margin-right: var(--spacing--40);
+  width: 21px;
+  height: 21px;
+
+  svg path {
+    stroke: var(--color--gray-900);
+  }
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+}
+
+.mainNavigation {
+  position: relative;
+  width: var(--admin--navigation--width);
+  min-height: 100vh;
+  min-width: 130px;
+  box-shadow: 7px 4px 34px rgba(0, 0, 0, 0.04);
+}
+
+.menuList {
+  padding: 0;
+}
+
+.mainNavigationItemIcon {
+  --color--navigation-icon: #cdcdcd;
+  --color-hovered--navigation-icon: var(--color--brow-text);
+
+  margin-bottom: 7px;
+
+  &.homeIcon {
+    max-height: 19px;
+
+    svg path {
+      stroke: var(--color--navigation-icon);
+    }
+  }
+
+  &.menuIcon {
+    max-height: 24px;
+
+    svg path:nth-child(1) {
+      stroke: var(--color--navigation-icon);
+    }
+
+    svg path:nth-child(2) {
+      fill: var(--color--navigation-icon);
+    }
+
+    svg path:nth-child(3) {
+      fill: var(--color--navigation-icon);
+    }
+  }
+
+  &.mealKitsIcon {
+    max-height: 18px;
+    margin-bottom: 10px;
+  }
+
+  &.masterClassIcon {
+    max-height: 21px;
+
+    svg path {
+      stroke: var(--color--navigation-icon);
+    }
+  }
+
+  &.storeIcon {
+    max-height: 20px;
+
+    svg path {
+      fill: var(--color--navigation-icon);
+    }
+  }
+
+  &.adminChefsIcon {
+    svg path {
+      stroke: var(--color--navigation-icon);
+    }
+  }
+
+  &.blogIcon {
+    margin-bottom: 0;
+
+    svg path {
+      stroke: var(--color--navigation-icon);
+    }
+  }
+}
+
+.mainNavigationItemLink {
+  font-size: 13px !important;
+  color: var(--color--gray-900) !important;
+  line-height: 1 !important;
+}
+
+.mainNavigationItem {
+  padding: 0 !important;
+  height: 100px;
+
+  &.active {
+    background-color: var(--color--primary-main);
+    pointer-events: none;
+
+    .menuIcon {
+      svg path:nth-child(1) {
+        stroke: var(--color--brow-text);
+      }
+
+      svg path:nth-child(2) {
+        fill: var(--color--brow-text);
+      }
+
+      svg path:nth-child(3) {
+        fill: var(--color--brow-text);
+      }
+    }
+
+    .mealKitsIcon {
+      path {
+        fill: var(--color--brow-text);
+      }
+    }
+
+    .adminChefsIcon {
+      path {
+        stroke: var(--color--brow-text);
+      }
+    }
+  }
+}
+
+.mainNavigationLink {
+  height: 100px;
+}
+
+.innerContentTitle {
+  font-size: 20px !important;
+  font-weight: bold !important;
+}
+
+.innerNavigation {
+  padding-left: var(--spacing--20);
+  width: 300px;
+}
+
+.innerNavigationHead {
+  margin-top: var(--spacing--10);
+  padding: var(--spacing--20);
+}
+
+.innerMenuList {
+  padding-right: 0 !important;
+}
+
+.innerNavigationItemActive {
+  --color--nav-item-background: var(--color--gray-0);
+}
+
+.innerNavigationItem {
+  position: relative !important;
+  z-index: 2;
+  padding: var(--spacing--20) !important;
+  overflow: visible !important;
+  background-color: var(--color--nav-item-background) !important;
+  border-radius: var(--border--radius-16) 0 0 var(--border--radius-16) !important;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    z-index: 0;
+    background-color: transparent;
+    height: 50px;
+    width: 25px;
+    pointer-events: none;
+  }
+
+  &:before {
+    bottom: 60px;
+    border-bottom-right-radius: 25px;
+    box-shadow: 0 25px 0 0 var(--color--nav-item-background);
+  }
+
+  &:after {
+    bottom: -50px;
+    border-top-right-radius: 25px;
+    box-shadow: 0 -25px 0 0 var(--color--nav-item-background);
+  }
+
+  :global {
+    .MuiTouchRipple-root {
+      z-index: 10;
+    }
+  }
+}
+
+.innerNavigationText {
+  font-weight: normal !important;
+  font-size: 14px !important;
+}
+
+.innerContent {
+  display: flex;
+  flex: 1 1 auto;
+}
+
+.section {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--color--gray-0);
+  padding-bottom: 50px;
+  figure {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+.popper {
+  margin-top: 10px;
+}
+
+.paper {
+  padding-bottom: 0;
+  width: 230px;
+  border-radius: 8px !important;
+}
+
+.dropdownMenuItem {
+  margin-top: 5px !important;
+  font-size: 0.875rem !important;
+  color: var(--color--gray-900) !important;
+}
+
+.meuItemIcon {
+  min-width: 20px !important;
+
+  svg {
+    position: relative;
+    top: 4px;
+  }
+}
+
+.profileName {
+  line-height: 1 !important;
+}
+
+.profileNameBold {
+  margin-top: 5px !important;
+  font-weight: bold !important;
+}
+
+.wrapper {
+  padding: 30px;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  :global {
+    h4 {
+      font-weight: 700;
+      margin-left: 20px;
+      font-size: 26px;
+    }
+  }
+}
+
+.headTitle {
+  display: flex;
+  align-items: center;
+}
+
+.formLabel {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.button {
+  font-weight: bold !important;
+  font-size: 16px !important;
+  width: 100px !important;
+
+  :global {
+    circle {
+      color: #fff;
+    }
+  }
+}
+
+.radioFormGroup {
+  flex-direction: row;
+}
+
+.whiteBlock {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 30px;
+
+  :global {
+    h6 {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.whiteBlockMarginZero {
+  margin-top: 0 !important;
+}
+
+.whiteBlockDisabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.specificationsFields {
+  display: flex;
+  align-items: center;
+}
+
+.specificationsField {
+  margin-right: 20px;
+}
+
+.leftSide {
+  flex: 0 0 75%;
+}
+
+.rightSide {
+  flex: 1;
+}

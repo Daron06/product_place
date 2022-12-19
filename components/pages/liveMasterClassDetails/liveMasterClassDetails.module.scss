@@ -1,0 +1,42 @@
+@import 'styles/media';
+
+.sidebarWr {
+  background-color: #fafafa;
+  border-left: 1px solid #eeeeee;
+}
+
+.btnsWrapper {
+  display: none;
+  @include phone-lg {
+    display: flex;
+  }
+  .closeWr {
+    border: 1px solid #eeeeee;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+
+    .closeButton {
+      width: 25px;
+      height: 25px;
+      padding: 0;
+    }
+  }
+
+  .chatTitle {
+    font-size: 20px;
+    line-height: 110%;
+    color: #373737;
+  }
+  .showButton {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    color: #373737;
+    svg {
+      margin-right: 4px;
+    }
+  }
+}

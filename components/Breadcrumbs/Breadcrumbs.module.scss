@@ -1,0 +1,18 @@
+@import 'styles/media';
+
+.lastItem {
+  color: var(--color--gray-600);
+}
+
+.block {
+  h6 {
+    font-size: 14px !important;
+  }
+}
+
+.chefsStore {
+  margin-left: 40px !important;
+  @include phone-lg {
+    margin-left: 0 !important;
+  }
+}

@@ -1,0 +1,54 @@
+@import "styles/media";
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: var(--spacing--40);
+    margin: 0;
+  }
+
+  li {
+    margin: 15px;
+    max-width: 163px;
+    flex: 1 1 auto;
+    @supports (display: grid) {
+      margin: 0;
+    }
+  }
+}
+
+.gridContent {
+  display: grid;
+  grid-template-columns: repeat(3, 163px);
+  grid-column-gap: 40px;
+  grid-row-gap: 30px;
+
+  @include phone-m {
+    grid-template-columns: repeat(2, 157px);
+    grid-column-gap: 40px;
+    grid-row-gap: 30px;
+  }
+}
+
+.gridImageCircle {
+  width: 163px;
+  height: 163px;
+  border-radius: 50%;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.text {
+  font-size: 16px;
+  padding-left: 10px;
+}

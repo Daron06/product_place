@@ -1,0 +1,41 @@
+.circleProgressColor {
+  circle {
+    color: var(--color--brow-text);
+  }
+}
+.statusBlock {
+  background: #fff3b4;
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 20px;
+  color: #917c12;
+  font-weight: bold;
+  padding: 5px 10px;
+  text-transform: capitalize;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+}
+.statusWrapper {
+  :global {
+    .status.declined,
+    .status.canceled,
+    .status.returned {
+      background-color: #fff0ef;
+      color: #ff544a;
+    }
+    .status.completed {
+      background: #eaf8f4;
+      color: #1bb486;
+    }
+    .status.pending,
+    .status.processing {
+      background: #fff3b4;
+      color: #917c12;
+    }
+    .status.to-invoice {
+      background: rgba(70, 54, 255, 0.13);
+      color: #7169d1;
+    }
+  }
+}

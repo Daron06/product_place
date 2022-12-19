@@ -1,0 +1,22 @@
+.tableCell {
+  cursor: pointer;
+  font-weight: 600 !important;
+  font-size: 12px !important;
+  color: var(--color--gray-900) !important;
+}
+
+.filterIcon {
+  margin-left: 15px;
+}
+
+.ascending {
+  transform: rotate(0deg);
+}
+
+.descending {
+  transform: rotate(180deg);
+}
+
+.checkboxRoot {
+  width: 100%;
+}

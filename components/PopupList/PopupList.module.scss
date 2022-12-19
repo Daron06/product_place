@@ -1,0 +1,24 @@
+.popup {
+  max-width: 320px;
+  z-index: 1;
+}
+
+.popupList {
+  max-height: 330px;
+  overflow: auto;
+}
+
+.popupListImage {
+  width: 35px !important;
+  height: 35px !important;
+  margin-right: 10px !important;
+}
+
+.popupListItem {
+  display: flex;
+  align-items: center;
+}
+
+.popupListItemText {
+  margin: 0 !important;
+}

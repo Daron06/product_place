@@ -1,0 +1,18 @@
+{
+  "writeKey": "a8363538468735257245-926d1a1d912625f6214abfb743fbdb57bfdd8c470c5fc4530ae212a9b9504db1",
+  "readKey": "a8363538468735257245-9a6887eeaa48e089732150f66de4f70bf4933f618574af7fa90d600178f49efb",
+  "upload": {
+    "type": "json",
+    "files": [{
+      "pattern": "public/locales/en/*.json",
+      "lang": "en"
+    },{
+      "pattern": "public/locales/ar/*.json",
+      "lang": "ar"
+    }]
+  },
+  "download": {
+    "files": "public/localazy/${lang}/${file}",
+    "includeSourceLang": true
+  }
+}

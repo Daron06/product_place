@@ -1,0 +1,48 @@
+.map {
+  overflow: visible !important;
+}
+
+.stepTitle {
+  margin-bottom: var(--spacing--30) !important;
+  font-size: 1.635rem;
+}
+
+.formLabel {
+  font-weight: 600 !important;
+  margin-bottom: 8px !important;
+  display: inline-block;
+}
+
+.root {
+  width: 100%;
+  max-width: 650px;
+  margin: auto;
+}
+
+.pageTitle {
+  margin-bottom: var(--spacing--20) !important;
+  font-size: 2.625rem !important;
+}
+
+.stepper {
+  margin: auto;
+  max-width: 500px;
+
+  :global {
+    .MuiStepConnector-line {
+      opacity: 0;
+      border-color: transparent !important;
+    }
+  }
+}
+
+.stepperInner {
+  margin: auto;
+  max-width: 350px;
+}
+
+.stepperInnerLocation {
+  margin: auto;
+  max-width: 530px;
+  margin-bottom: 40px;
+}

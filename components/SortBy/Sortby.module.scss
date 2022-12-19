@@ -1,0 +1,35 @@
+@import 'styles/media';
+
+.root {
+  width: max-content;
+  cursor: pointer;
+
+  @include phone-m {
+    margin-top: 20px;
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+.title {
+  margin-right: 10px !important;
+  font-size: 14px;
+  color: var(--color--gray-400);
+}
+
+.chevron {
+  transform: rotate(90deg);
+}
+
+.popoverItem {
+  padding: 5px 0;
+  font-weight: normal;
+  font-size: 16px;
+  color: var(--color--gray-900) !important;
+}
+
+html[lang='ar'] .title {
+  margin-right: unset !important;
+  margin-left: 12px;
+}

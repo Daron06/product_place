@@ -1,0 +1,56 @@
+@import '../../../../styles/media';
+@import 'styles/media';
+
+.header {
+  box-shadow: 7px 4px 10px rgba(0, 0, 0, 0.04);
+  background: #ffffff;
+  padding: 15px 0;
+
+  @include tablets {
+    height: 80px;
+  }
+}
+
+.button {
+  @include tablets {
+    height: 40px;
+  }
+}
+
+.headerLogo {
+  position: relative;
+  left: 7px;
+  top: 1px;
+  width: 110px;
+  height: 34px;
+  @include phone-m {
+    width: 80px;
+    height: 24px;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.headerWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+
+  @include tablets {
+    height: 100%;
+  }
+
+  @include phone-m {
+    padding: 0 20px;
+    button {
+      box-shadow: none !important;
+    }
+  }
+}

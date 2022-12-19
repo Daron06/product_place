@@ -1,0 +1,21 @@
+@import 'styles/media';
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--spacing--40);
+  }
+
+  @include phone-lg {
+    display: block;
+  }
+
+  @include phone-m {
+    grid-template-columns: 1fr;
+  }
+}

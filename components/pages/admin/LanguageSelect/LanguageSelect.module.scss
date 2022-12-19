@@ -1,0 +1,52 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  border-radius: 8px;
+  width: 100px;
+  height: 44px;
+  padding: 10px 15px;
+  position: relative;
+  .item {
+    font-weight: bold;
+    color: var(--color--black);
+    font-size: 16px;
+    margin-right: auto;
+    height: 24px;
+  }
+  :global {
+    .MuiSelect-select.MuiSelect-select {
+      padding-right: 0;
+    }
+    .MuiSelect-icon {
+      display: none;
+    }
+    .MuiInput-underline::before,
+    .MuiInput-underline::after {
+      display: none;
+    }
+    .MuiSelect-select:focus {
+      background-color: transparent;
+    }
+    .MuiSelect-root {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}
+.itemsWrapper {
+  .item {
+    font-weight: bold;
+    color: var(--color--black);
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  :global {
+    .MuiListItem-root.Mui-selected,
+    .MuiListItem-root.Mui-selected:hover {
+      background-color: rgba(0, 0, 0, 0.03);
+    }
+  }
+}

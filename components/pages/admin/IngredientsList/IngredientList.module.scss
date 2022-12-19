@@ -1,0 +1,27 @@
+.requiredInputField {
+  :global {
+    .MuiInput-root {
+      &:before, &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+.requiredList {
+  padding-top: 0 !important;
+  padding-bottom: 10px !important;
+  :global {
+    li[role="separator"] {
+      margin: 5px 0;
+    }
+    li[role="separator"]:last-of-type {
+      display: none;
+    }
+  }
+}
+
+.requiredListItem {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}

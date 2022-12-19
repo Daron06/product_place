@@ -1,0 +1,117 @@
+@import 'styles/media';
+
+.delivery {
+  .wrapper {
+    max-width: 773px;
+    background-color: #fff;
+    border-radius: var(--border--radius-16);
+    margin-bottom: 30px;
+    padding: 25px;
+
+    @include tablets {
+      border-radius: 0;
+    }
+
+    > h3 {
+      margin: 0;
+      margin-bottom: 25px;
+    }
+
+    .content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+
+      :global {
+        .MuiSvgIcon-root {
+          color: var(--color--secondary-main);
+
+          > .MuiButton-label {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 20px;
+            letter-spacing: 0em;
+          }
+        }
+      }
+
+      .info {
+        > h3 {
+          margin: 0;
+          margin-bottom: 10px;
+
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 18px;
+        }
+        > span {
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 14px;
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+  .button {
+    display: flex;
+    flex-direction: row-reverse;
+
+    background-color: #f8f8f8;
+  }
+
+  .submitButton {
+    padding: 15px 40px;
+
+    @include tablets {
+      margin: 0 20px;
+    }
+  }
+
+  .saveButton {
+    padding: 15px 40px;
+    margin-top: 10px;
+
+    :global {
+      .MuiButton-label {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 20px;
+        letter-spacing: 0em;
+        @include phone-m {
+          font-size: 14px;
+        }
+      }
+    }
+    @include phone-m {
+      padding: 10px 20px;
+    }
+  }
+
+  .deleteButton {
+    padding: 15px 40px;
+    margin-top: 10px;
+
+    :global {
+      .MuiButton-label {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 20px;
+        letter-spacing: 0em;
+      }
+    }
+    @include phone-m {
+      padding: 10px 20px;
+    }
+  }
+}
+
+.skeletonItem {
+  border-radius: var(--border--radius-16);
+}
+
+html[lang='ar'] .deleteButton {
+  margin-left: 0 !important;
+  margin-right: 10px;
+}

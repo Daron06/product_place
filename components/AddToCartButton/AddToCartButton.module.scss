@@ -1,0 +1,14 @@
+@import '../../styles/media';
+
+.addCartButton {
+  min-width: 250px !important;
+  @include phone-m {
+    overflow: hidden;
+  }
+
+  span {
+    @include phone-m {
+      display: flex;
+    }
+  }
+}

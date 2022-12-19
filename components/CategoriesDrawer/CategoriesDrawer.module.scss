@@ -1,0 +1,37 @@
+@import 'styles/mixins/flexbox';
+@import 'styles/media';
+
+.cartPaper {
+  width: 100% !important;
+  max-width: 435px !important;
+  padding: 30px !important;
+}
+.cardRoot {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.cartHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 30px;
+
+  h2 {
+    margin: 0;
+  }
+}
+
+.cartItemInfoButtons {
+  @include flex($alignment: center);
+}
+
+html[lang='ar'] .cartItemInfoName {
+  margin-right: unset;
+  margin-left: 12px;
+  text-align: right;
+}
+
+html[lang='ar'] .cartItemInfoPrice {
+  flex-direction: row-reverse;
+}

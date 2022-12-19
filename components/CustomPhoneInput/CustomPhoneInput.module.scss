@@ -1,0 +1,50 @@
+.select {
+  min-width: 190px;
+  border: 1px solid red;
+  border-radius: 8px !important;
+  background-color: #fff !important;
+  height: 48px;
+
+  &:after,
+  &:before {
+    display: none;
+  }
+
+  :global {
+    fieldset {
+      border: none;
+    }
+
+    .MuiSelect-select {
+      height: 26px !important;
+      border-radius: 8px !important;
+      line-height: 25px !important;
+      text-align: left;
+      padding-left: 15px;
+      background-color: transparent !important;
+    }
+  }
+}
+
+.selectLabel {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 13px;
+}
+
+.selectWrapper {
+  margin-bottom: 20px;
+}
+
+.selectChoose {
+  max-width: 500px !important;
+}
+
+.countryCode {
+  display: flex;
+  align-items: center;
+  :last-child {
+    margin-left: 5px;
+    min-width: 40px;
+  }
+}

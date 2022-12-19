@@ -1,0 +1,58 @@
+@import 'styles/media';
+
+.buttonsWrapper {
+  margin-bottom: 30px;
+  padding-left: 18px;
+  padding-right: 18px;
+
+  .receiptLink {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #47d7ac;
+    border-radius: 12px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #1cbd8d;
+    font-weight: 400;
+    span {
+      margin-left: 10px;
+    }
+  }
+
+  .listItemIcon {
+    min-width: 35px !important;
+    max-width: max-content !important;
+  }
+  .button {
+    width: 180px !important;
+    border-radius: var(--border--radius-16) !important;
+    font-weight: bold !important;
+    font-size: 16px !important;
+  }
+  .favoriteButtonLabelActive {
+    svg {
+      path:first-of-type {
+        animation: heart 0.45s cubic-bezier(0.17, 0.89, 0.32, 1.49);
+        fill: var(--color--secondary-main);
+        opacity: 1;
+      }
+    }
+  }
+  .buttonRoot {
+    padding: 0 !important;
+    min-width: 50px !important;
+  }
+
+  .buttonHeart {
+    width: 20px;
+    height: 20px;
+
+    path {
+      fill: transparent;
+      stroke-width: 8px;
+      stroke: var(--color--gray-900);
+    }
+  }
+}

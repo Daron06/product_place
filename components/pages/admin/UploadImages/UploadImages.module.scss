@@ -1,0 +1,141 @@
+@import 'styles/mixins/flexbox';
+
+.filesList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.uploadedImage {
+  width: 130px;
+  border-radius: 12px;
+  height: 80px;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.uploadedImageLoading {
+  @include flex($alignment: center, $justify-content: center);
+  border: 1px solid var(--color--gray-200);
+
+  &:before {
+    display: block;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    animation: background-loading 0.8s infinite ease-in-out;
+  }
+}
+
+.uploadedImageRemoveButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  background-color: #fff;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  cursor: pointer;
+
+  svg {
+    position: relative;
+    top: 1px;
+    right: -2px;
+  }
+}
+
+.avatarUploaderRemoveIcon {
+  position: absolute;
+  right: -25px;
+  top: -2px;
+  cursor: pointer;
+
+  svg {
+    position: relative;
+    top: 1px;
+    right: -2px;
+  }
+}
+
+.uploadBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #1cbd8d;
+  padding: 12px;
+  width: 130px;
+  height: 80px;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-right: 10px;
+
+  svg {
+    margin-bottom: 5px;
+  }
+}
+
+.uploadBlockText {
+  color: #1cbd8d;
+}
+
+.avatarUploader {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.38);
+  }
+}
+
+.avatarLoader {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cameraIcon {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 29px;
+  height: 25px;
+  margin: auto;
+}
+
+@keyframes background-loading {
+  0% {
+    background: rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    background: rgba(255, 255, 255, 0.6);
+  }
+  100% {
+    background: rgba(255, 255, 255, 0.5);
+  }
+}

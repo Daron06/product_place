@@ -1,0 +1,53 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+report*.json
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+/storybook-static
+/.idea
+/public/localazy
+/public/locales
+/public/static/localazy.json
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# vercel
+.vercel
+
+Dockerfile
+/public
+/assets
+.storybook
+/styles
+/services
+/cypress
+/pages/admin
+/pages/checkout
+/pages/faq
+/pages/auth
+.env.local.example

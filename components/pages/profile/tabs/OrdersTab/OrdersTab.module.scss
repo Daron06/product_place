@@ -1,0 +1,145 @@
+@import 'styles/media';
+
+.orders {
+  .tabs {
+    display: inline-block;
+    border-bottom: 1px solid #eeeeee;
+    max-width: 773px;
+    width: 100%;
+
+    @include tablets {
+      margin-top: 40px;
+    }
+  }
+  :global {
+    .MuiTab-root.Mui-selected .MuiTab-wrapper {
+      color: #373737;
+    }
+  }
+}
+.tabsContent {
+  margin-top: 30px;
+}
+.order {
+  width: 100%;
+  max-width: 773px;
+  background-color: #fff;
+  border-radius: var(--border--radius-16);
+  margin-bottom: 20px;
+
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .topInfo {
+    padding: 25px 25px 20px;
+    border-bottom: 1px solid var(--color--gray-200);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .ordersInfo {
+    display: flex;
+    align-items: center;
+    p {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 16px;
+
+      margin-right: 20px;
+    }
+    span {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 16px;
+    }
+  }
+  .payInfo {
+    display: flex;
+    align-items: center;
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+
+    > p {
+      margin-left: 40px;
+    }
+  }
+
+  .botInfo {
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    > p {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+
+      opacity: 0.6;
+
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    > div {
+      display: flex;
+      align-items: center;
+      margin-left: 80px;
+
+      > p {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0em;
+
+        margin-left: 5px;
+        padding: 5px 10px;
+
+        white-space: nowrap;
+
+        background: var(--color--gray-100);
+        border-radius: var(--border--radius-6);
+      }
+    }
+  }
+  .unpaidWr {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+    padding-right: 25px;
+
+    .PayBtnWr {
+      width: 144px;
+      margin-left: 20px;
+    }
+  }
+}
+
+html[lang='ar'] .PayBtnWr {
+  margin-right: 20px;
+  margin-left: unset;
+}
+
+html[lang='ar'] .botInfo > div {
+  margin-left: unset;
+  margin-right: 80px;
+}
+
+html[lang='ar'] .ordersInfo p {
+  margin-left: 20px;
+  margin-right: unset;
+}
+html[lang='ar'] .payInfo > p {
+  margin-left: unset;
+  margin-right: 80px;
+}
+html[lang='ar'] .indicator {
+  margin-left: unset;
+  margin-right: 12px;
+}

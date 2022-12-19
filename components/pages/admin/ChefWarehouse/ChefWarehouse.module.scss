@@ -1,0 +1,62 @@
+.root {
+  padding: var(--spacing--30);
+  max-width: 95.4%;
+  margin: auto;
+}
+
+.adminChefStore {
+  transition: all .2s ease;
+  height: calc(100% + 50px);
+  max-height: 360px;
+  width: 310px;
+  margin-bottom: 30px;
+  position: relative;
+
+  &:hover {
+    transform: scale(1.02);
+    z-index: 10;
+    max-height: calc(100% + 50px);
+
+    .storeImportButton {
+      opacity: 1;
+      visibility: visible;
+      max-height: 50px;
+    }
+  }
+
+}
+
+.adminStoreCardItemDetails {
+  height: max-content;
+}
+
+.storeImportButton {
+  max-height: 0;
+  position: absolute;
+  bottom: 5%;
+  opacity: 0;
+  width: 100%;
+  padding: 0 var(--spacing--20);
+  transition: all .1s ease;
+  visibility: hidden;
+}
+
+.list {
+  grid-template-columns: repeat(auto-fill, 297px) !important;
+}
+
+.cardBuy {
+  font-size: 15px !important;
+  button {
+    display: none;
+  }
+}
+
+.commission {
+  font-size: 15px !important;
+}
+
+.removeButton {
+  background-color: var(--color--gray-100) !important;
+  color: var(--color--gray-600) !important;
+}

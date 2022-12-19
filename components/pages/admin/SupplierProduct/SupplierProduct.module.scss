@@ -1,0 +1,32 @@
+.recipePhoto {
+  width: 115px;
+  height: 115px;
+  border-radius: 8px;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+.recipeTitle {
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 110%;
+  letter-spacing: -0.5px;
+  color: #373737;
+  margin-bottom: 10px;
+}
+
+.recipeSecondInfo {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 100%;
+  color: #373737;
+  opacity: 0.6;
+  margin-bottom: 25px;
+}
+
+.recipeDescription {
+  font-size: 16px;
+  line-height: 150%;
+  color: #373737;
+}

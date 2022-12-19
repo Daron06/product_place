@@ -1,0 +1,34 @@
+@import 'styles/media';
+
+.favorites {
+  .tabs {
+    :global {
+      .MuiTab-root.Mui-selected .MuiTab-wrapper {
+        color: #373737;
+      }
+    }
+
+    @include tablets {
+      margin-top: 40px;
+    }
+  }
+}
+
+.tabsContent {
+  margin: auto;
+  width: 100%;
+  max-width: 773px;
+
+  @include tablets {
+    padding: 0 20px;
+  }
+}
+
+.cards {
+  margin-bottom: var(--spacing--30);
+}
+
+html[lang='ar'] .indicator {
+  margin-left: unset;
+  margin-right: 12px;
+}

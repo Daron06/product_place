@@ -1,0 +1,196 @@
+@import 'styles/media';
+
+.greyBg {
+  background: #f8f8f8;
+}
+.rate {
+  width: 774px;
+  margin: 0 auto;
+
+  h2 {
+    margin: 0;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 38px;
+    letter-spacing: -0.699999988079071px;
+
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    .supplier {
+      display: flex;
+      align-items: center;
+      margin-top: 5px;
+      > div {
+        width: 25px;
+        height: 25px;
+        margin-right: 8px;
+      }
+    }
+
+    h5 {
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 100%;
+      letter-spacing: -0.5px;
+      color: #373737;
+      margin: 5px 0 25px 0;
+    }
+    p {
+      margin: 0;
+
+      font-size: 18px;
+      font-weight: 400;
+
+      color: #918786;
+    }
+  }
+
+  .wrapper {
+    margin-top: 25px;
+    padding: 25px 30px 10px 25px;
+    background-color: #fff;
+    border-radius: 12px;
+    @include phone-m {
+      border-radius: 0;
+      border-bottom: 1px solid var(--color--gray-200);
+      margin-top: 0;
+      padding: 15px 20px 5px 15px;
+    }
+  }
+  .content {
+    > div:not(:last-child) {
+      border-bottom: 1px solid var(--color--gray-200);
+    }
+  }
+  .item {
+    margin-top: 20px;
+    padding-bottom: 20px;
+    @include phone-m {
+      position: relative;
+    }
+    .itemHead {
+      @include phone-m {
+        display: block;
+      }
+    }
+  }
+
+  .food {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    img {
+      border-radius: 12px;
+      width: 48px;
+      height: 48px;
+      margin-right: 15px;
+    }
+
+    .text {
+      span {
+        font-size: 14px;
+        font-weight: 700;
+      }
+      p {
+        margin: 0;
+        margin-top: 8px;
+        font-size: 13px;
+        font-weight: 400;
+
+        opacity: 0.7;
+      }
+    }
+  }
+  .iconsWrapper {
+    margin-right: -7px;
+    margin-top: 5px;
+    svg {
+      margin: 0 7px;
+    }
+  }
+  .reviewWrapper {
+    margin-top: 32px;
+    span {
+      font-size: 13px;
+      margin-bottom: 8px;
+      display: block;
+    }
+    > div {
+      margin-bottom: 0;
+    }
+    textarea {
+      min-height: 73px;
+    }
+  }
+
+  .rating {
+    :global {
+      .MuiRating-iconFilled {
+        color: var(--color--secondary-main);
+      }
+      .MuiRating-iconHover {
+        color: var(--color--secondary-main);
+      }
+    }
+    @include phone-m {
+      margin-top: 20px;
+    }
+  }
+  :global {
+    .hidden {
+      display: none;
+    }
+  }
+  .backButton {
+    min-width: 43px !important;
+    height: 43px !important;
+    width: 43px !important;
+    border: 1px solid #e0e0e0 !important;
+    margin-right: auto;
+    @include phone-m {
+      margin-left: 15px;
+    }
+  }
+  .rateTitle {
+    margin-right: auto;
+  }
+  .backButtonWr {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    > div {
+      margin-top: 15px;
+    }
+  }
+  .thanks {
+    @include phone-m {
+      position: absolute;
+      right: 0;
+      bottom: 28px;
+    }
+  }
+  @include phone-m {
+    width: 100%;
+  }
+}
+
+html[lang='ar'] .supplier > div {
+  margin-right: unset;
+  margin-left: 8px;
+}
+
+html[lang='ar'] .food img {
+  margin-right: unset;
+  margin-left: 15px;
+}
+
+html[lang='ar'] .flexB {
+  flex-direction: row-reverse;
+}

@@ -1,0 +1,21 @@
+.button {
+  :global {
+    .MuiButtonBase-root {
+      border-radius: 10px;
+    }
+    .Mui-disabled {
+      &:not(.MuiButton-outlined) {
+        span {
+          color: white !important;
+          border-color: white;
+        }
+      }
+    }
+  }
+}
+
+.circleProgressColor {
+  circle {
+    color: var(--color--brow-text);
+  }
+}

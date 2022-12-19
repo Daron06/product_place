@@ -1,0 +1,186 @@
+image: docker:19.03.12
+
+variables:
+  GIT_DEPTH: '10'
+  DOCKER_TLS_CERTDIR: '/certs'
+  CONTAINER_BUILD_IMAGE: $CI_REGISTRY_IMAGE:$CI_COMMIT_SHORT_SHA
+  DOMAIN: $CI_DOCKER_DEPLOY_HOST
+  API_URL: https://$CI_DOCKER_DEPLOY_HOST/api
+  API_NODE_URL: http://api_app
+  NEXT_PUBLIC_CHECKOUT_PK: $CHECKOUT_PK
+
+services:
+  - name: docker:19.03.12-dind
+
+stages:
+  - build
+  - push
+  - deploy
+  - clean
+
+cache:
+  #  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules
+
+build:
+  stage: build
+  only:
+    - master
+    - develop
+    - testing
+    - tags
+  before_script:
+    - echo $CI_JOB_ID
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+  script:
+    - docker build -t $CONTAINER_BUILD_IMAGE .
+    - docker push $CONTAINER_BUILD_IMAGE
+
+.push: &push
+  before_script:
+    - apk add jq
+    - export VERSION=$(jq -r .version package.json)
+    - export CONTAINER_RELEASE_IMAGE=$CI_REGISTRY_IMAGE:v$VERSION-$TYPE$CI_COMMIT_SHORT_SHA
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+  script:
+    - docker pull $CONTAINER_BUILD_IMAGE
+    - docker tag $CONTAINER_BUILD_IMAGE $CONTAINER_RELEASE_IMAGE
+    - docker push $CONTAINER_RELEASE_IMAGE
+    - echo "CONTAINER_RELEASE_IMAGE=$CONTAINER_RELEASE_IMAGE" >> build.env
+    - echo "TYPE=$TYPE" >> build.env
+
+  artifacts:
+    reports:
+      dotenv: build.env
+  retry: 2
+
+push_master:
+  stage: push
+  only:
+    - master
+  variables:
+    TYPE: beta.
+    NAMESPACE: beta
+  <<: *push
+
+push_testing:
+  stage: push
+  only:
+    - testing
+  variables:
+    TYPE: qa.
+    NAMESPACE: qa
+  <<: *push
+
+push_develop:
+  stage: push
+  only:
+    - develop
+  variables:
+    TYPE: dev.
+    NAMESPACE: dev
+  <<: *push
+
+push_tags:
+  stage: push
+  only:
+    - tags
+  variables:
+    TYPE: ${CI_COMMIT_TAG##*\/}
+  <<: *push
+
+.deploy: &deploy
+  stage: deploy
+  variables:
+    DOCKER_HOST: ssh://$CI_DOCKER_DEPLOY_USER@$CI_DOCKER_DEPLOY_HOST
+  before_script:
+    - mkdir -p ~/.ssh
+    - apk add --update openssh-client
+    - eval $(ssh-agent -s)
+    - ssh-keyscan $CI_DOCKER_DEPLOY_HOST > ~/.ssh/known_hosts
+    - cat "$SSH_PRIVATE_KEY" | ssh-add -
+    - chmod 700 ~/.ssh
+    - chmod 644 ~/.ssh/known_hosts
+  script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker pull $CONTAINER_RELEASE_IMAGE
+    - sed -i -e 's/unknown:.*$/$CONTAINER_RELEASE_IMAGE/g'  .build/docker-compose.yml
+    - env $(cat .env | grep ^[A-Z] | xargs) docker stack deploy -c .build/docker-compose.yml frontend
+
+deploy_master:
+  only:
+    - master
+  environment:
+    name: $CI_COMMIT_REF_NAME
+    url: https://${DOMAIN}
+  <<: *deploy
+
+deploy_testing:
+  only:
+    - testing
+  environment:
+    name: $CI_COMMIT_REF_NAME
+    url: https://${DOMAIN}
+  <<: *deploy
+
+deploy_develop:
+  only:
+    - develop
+  environment:
+    name: $CI_COMMIT_REF_NAME
+    url: https://${DOMAIN}
+  <<: *deploy
+
+deploy_tags:
+  rules:
+    - if: '$CI_COMMIT_TAG =~ /^deploy.*/'
+
+  environment:
+    name: tags/$CI_COMMIT_REF_NAME
+    url: https://${TYPE}.${DOMAIN}
+    on_stop: remove_tags
+
+  <<: *deploy
+  script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker pull $CONTAINER_RELEASE_IMAGE
+    - sed -i -e 's/unknown:.*$/$CONTAINER_RELEASE_IMAGE/g'  .build/docker-compose.yml
+    - export DOMAIN=${CI_COMMIT_TAG##*\/}.${DOMAIN}
+    - export NAMESPACE=${CI_COMMIT_TAG##*\/}
+    - echo $NAMESPACE
+    - env $(cat .env | grep ^[A-Z] | xargs) docker stack deploy -c .build/docker-compose.yml frontend_${NAMESPACE}
+
+remove_tags:
+  stage: deploy
+  rules:
+    - if: '$CI_COMMIT_TAG =~ /^deploy.*/'
+      when: manual
+  script:
+    - export NAMESPACE=${CI_COMMIT_TAG##*\/}
+    - docker stack rm frontend_${NAMESPACE}
+  environment:
+    name: tags/$CI_COMMIT_REF_NAME
+    action: stop
+
+clean:
+  stage: clean
+  only:
+    - master
+    - develop
+    - testing
+  environment:
+    name: $CI_COMMIT_REF_NAME
+  variables:
+    DOCKER_HOST: ssh://$CI_DOCKER_DEPLOY_USER@$CI_DOCKER_DEPLOY_HOST
+  before_script:
+    - mkdir -p ~/.ssh
+    - apk add --update openssh-client
+    - eval $(ssh-agent -s)
+    - ssh-keyscan $CI_DOCKER_DEPLOY_HOST > ~/.ssh/known_hosts
+    - cat "$SSH_PRIVATE_KEY" | ssh-add -
+    - chmod 700 ~/.ssh
+    - chmod 644 ~/.ssh/known_hosts
+  script:
+    - docker rmi $(docker images --filter "before=$CONTAINER_RELEASE_IMAGE" --filter="reference=$CI_REGISTRY_IMAGE" -q) -f || true
+  allow_failure: true

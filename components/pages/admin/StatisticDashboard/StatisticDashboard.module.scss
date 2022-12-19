@@ -1,0 +1,31 @@
+.statisticName {
+  font-size: 18px;
+  font-weight: normal !important;
+}
+
+.statisticCount {
+  font-size: 26px !important;
+  font-weight: bold !important;
+}
+
+.statisticBlocks {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+}
+
+.statisticBlocksChef {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+}
+
+.orderTableSection {
+  display: grid;
+  grid-template-columns: 3.2fr 1fr;
+  grid-gap: 30px;
+}
+
+.statsWithGraph {
+  padding-bottom: 80px;
+}

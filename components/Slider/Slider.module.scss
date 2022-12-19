@@ -1,0 +1,255 @@
+@import 'styles/media';
+
+.slider {
+  padding-top: 80px;
+
+  & > div:first-of-type {
+    padding: 0 0 45px 0;
+    @include phone-m {
+      padding: 10px;
+    }
+  }
+
+  @include phone-m {
+    padding-top: 60px;
+  }
+}
+
+.sliderWrapper {
+  position: relative;
+  width: 100%;
+
+  :global {
+    /* Slider */
+    .slick-slider {
+      position: relative;
+
+      display: block;
+      box-sizing: border-box;
+
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+
+      -webkit-touch-callout: none;
+      -khtml-user-select: none;
+      -ms-touch-action: pan-y;
+      touch-action: pan-y;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .slick-list {
+      position: relative;
+
+      display: block;
+      overflow: hidden;
+
+      margin: 0;
+      padding: 0;
+    }
+    .slick-list:focus {
+      outline: none;
+    }
+    .slick-list.dragging {
+      cursor: pointer;
+      cursor: hand;
+    }
+
+    .slick-slider .slick-track,
+    .slick-slider .slick-list {
+      -webkit-transform: translate3d(0, 0, 0);
+      -moz-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
+      -o-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+
+    .slick-track {
+      position: relative;
+      top: 0;
+      left: 0;
+
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .slick-track:before,
+    .slick-track:after {
+      display: table;
+
+      content: '';
+    }
+    .slick-track:after {
+      clear: both;
+    }
+    .slick-loading .slick-track {
+      visibility: hidden;
+    }
+    .slick-slide {
+      display: none;
+      float: left;
+      height: 100%;
+      min-height: 1px;
+    }
+    .slick-slide img {
+      display: block;
+    }
+    .slick-slide.slick-loading img {
+      display: none;
+    }
+    .slick-slide.dragging img {
+      pointer-events: none;
+    }
+    .slick-initialized .slick-slide {
+      display: block;
+    }
+    .slick-loading .slick-slide {
+      visibility: hidden;
+    }
+    .slick-vertical .slick-slide {
+      display: block;
+
+      height: auto;
+
+      border: 1px solid transparent;
+    }
+    .slick-arrow.slick-hidden {
+      display: none;
+    }
+
+    .slick-list {
+      @include phone-m {
+        overflow: visible;
+      }
+    }
+
+    .slick-track {
+      margin-left: 0;
+    }
+
+    .slick-initialized .slick-slide {
+      // TODO Решить проблему с display: none у класса .slick-slide
+      display: block;
+    }
+    .mobileSliderDots {
+      position: absolute;
+      bottom: 10px;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      opacity: 0;
+      li {
+        display: flex;
+        align-items: center;
+        button {
+          height: 8px;
+          width: 15px;
+          border-radius: 4px;
+          border: none !important;
+          text-indent: -50px;
+          overflow: hidden;
+          margin: 2px;
+        }
+      }
+      .slick-active {
+        button {
+          height: 10px;
+          margin: 2px;
+        }
+      }
+    }
+  }
+}
+
+.sliderArrow {
+  position: absolute;
+  top: 0;
+  right: 30px;
+  width: 43px;
+  height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  border-radius: 30px;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+  transition: opacity 0.1s;
+  font-size: 18px;
+  z-index: 10;
+
+  @include tablets {
+    font-size: 10px;
+  }
+
+  @include phone-m {
+    width: 35px;
+    height: 35px;
+
+    svg {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: auto;
+  }
+
+  svg {
+    position: relative;
+    fill: none;
+  }
+
+  &:hover {
+    background-color: darken(#f5f5f5, 2%);
+  }
+}
+
+.sliderArrowLeft {
+  right: 85px;
+  transform: rotate(180deg);
+}
+
+html[lang='ar'] .sliderArrow {
+  right: unset;
+  left: 0px;
+}
+html[lang='ar'] .sliderArrowLeft {
+  right: unset;
+  left: 55px;
+}
+
+.sliderFullLink {
+  position: absolute;
+  right: 155px;
+  top: 16px;
+  display: flex;
+  align-items: center;
+  color: var(--color--secondary-main);
+  cursor: pointer;
+  z-index: 1;
+
+  @include phone-m {
+    right: 0;
+    top: 19px;
+  }
+
+  svg {
+    position: relative;
+    top: 2px;
+  }
+}
+
+.sliderFullLinkRightAlign {
+  right: 30px;
+}
+
+.sliderFullLinkText {
+  margin-right: 10px;
+  font-size: 16px;
+  color: currentColor;
+}

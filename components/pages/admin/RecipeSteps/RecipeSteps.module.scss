@@ -1,0 +1,48 @@
+
+.recipeStep {
+  margin-top: 30px;
+  border-bottom: 1px solid var(--color--gray-200);
+}
+
+.addMoreStep {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.recipeStepHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+
+  :global {
+    .link {
+      svg {
+        position: relative;
+        top: 1px;
+        margin-right: 5px;
+
+        path {
+          stroke: var(--color--green-100);
+        }
+      }
+    }
+  }
+}
+
+.recipeStepTitle {
+  color: #DBDBDB !important;
+  font-size: 24px !important;
+  margin-bottom: 20px !important;
+}
+
+.recipeStepInfo {
+  display: flex;
+}
+
+.recipeStepFields {
+  margin-top: -4px;
+  margin-left: 20px;
+  flex: 1;
+}

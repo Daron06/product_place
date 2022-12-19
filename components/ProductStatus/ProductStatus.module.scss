@@ -1,0 +1,72 @@
+.root {
+  padding: 0 var(--spacing--10);
+  width: max-content;
+  height: 22px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: capitalize;
+
+  span {
+    line-height: 22px;
+  }
+}
+
+.popper {
+  display: none;
+}
+
+.statusText {
+  text-transform: capitalize;
+}
+
+.active,
+.completed {
+  background-color: var(--color--success-light);
+  color: var(--color--success-main);
+
+  .chevronIcon {
+    svg path {
+      stroke: var(--color--success-main);
+    }
+  }
+}
+
+.disabled,
+.blocked,
+.stopped {
+  background-color: var(--color--gray-100);
+  color: var(--color--gray-900);
+
+  .chevronIcon {
+    svg path {
+      stroke: var(--color--gray-900);
+    }
+  }
+}
+
+.rejected,
+.canceled {
+  background-color: #ffeeed;
+  color: #dd4940;
+}
+
+.pending,
+.processing {
+  background-color: var(--color--primary-light);
+  color: var(--color--brow-text);
+}
+
+.editable {
+  display: flex;
+  align-items: center;
+}
+
+.chevronIcon {
+  margin-bottom: 2px;
+  margin-left: 5px;
+}
+
+.dropdownRoot {
+  display: inline-block;
+}

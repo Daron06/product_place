@@ -1,0 +1,4 @@
+{
+  "blockHosts": ["*fonts.googleapis.com", "files.unknown.me"],
+  "chromeWebSecurity": false
+}

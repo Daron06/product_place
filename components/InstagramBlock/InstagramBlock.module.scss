@@ -1,0 +1,60 @@
+@import 'styles/media';
+
+.wrapper {
+  width: 100%;
+  height: 418px;
+  background-image: url(../../public/static/inst-bg-img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center left;
+  @include phone-lg {
+    background-position: center right 70%;
+  }
+  .follow {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 95%;
+    letter-spacing: -0.8px;
+    color: #373737;
+    @include phone-lg {
+      font-size: 36px;
+    }
+  }
+  .leftBlock {
+    width: 300px;
+    max-width: 300px;
+    margin-left: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    @include phone-lg {
+      margin-left: 20px;
+    }
+    a {
+      display: block;
+    }
+    .instaUserName {
+      margin-top: 20px;
+      margin-bottom: 40px;
+      font-weight: 700;
+      font-size: 20px;
+      color: #373737;
+      @include phone-lg {
+        margin-bottom: 30px;
+      }
+    }
+    .instaButton {
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      width: 135px;
+      height: 45px;
+      background: #fff;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 16px;
+      color: #373737;
+    }
+  }
+}

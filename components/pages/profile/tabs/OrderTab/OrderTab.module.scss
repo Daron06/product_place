@@ -1,0 +1,475 @@
+@import 'styles/media';
+.wrapper {
+  @include phone-m {
+    padding: 25px;
+  }
+  > h3 {
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 37px;
+    letter-spacing: -0.5px;
+
+    margin-top: 0;
+    margin-bottom: 15px;
+    @include phone-m {
+      font-size: 26px;
+    }
+  }
+
+  > span {
+    margin-bottom: 30px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0px;
+
+    opacity: 0.7;
+
+    display: block;
+  }
+}
+
+.receiptWrapper {
+  display: flex;
+  margin-top: 20px;
+  > svg {
+    margin-top: 5px;
+  }
+  .receiptLink {
+    a {
+      margin-right: 10px;
+      font-size: 16px;
+      color: #1cbd8d;
+      text-decoration: none;
+    }
+  }
+}
+
+.onlineLink {
+  display: block;
+  margin: 10px 0;
+  font-size: 16px;
+  color: #1cbd8d;
+}
+.order {
+  display: flex;
+  @include phone-m {
+    display: block;
+  }
+
+  .left {
+    width: 468px;
+    margin-right: 20px;
+    @include phone-m {
+      width: 100%;
+    }
+
+    .delivery {
+      display: flex;
+
+      path {
+        stroke: black;
+      }
+
+      > div {
+        padding-left: 10px;
+
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 18px;
+
+        > p {
+          margin: 0;
+          margin-top: 10px;
+
+          font-family: 'Kumbh Sans';
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 18px;
+        }
+
+        > span {
+          display: block;
+          margin-top: 10px;
+
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 18px;
+
+          color: var(--color--green-100);
+        }
+      }
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--color--gray-200);
+
+      > div > span {
+        font-size: 14px;
+        font-weight: 400;
+
+        opacity: 0.6;
+      }
+
+      > div > p {
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 20px;
+        letter-spacing: 0em;
+
+        margin: 0;
+        margin-top: 6px;
+        padding: 1px 10px;
+      }
+    }
+  }
+  .wrapper {
+    margin-top: 20px;
+  }
+  .wrapper,
+  .topWrapper {
+    padding: 25px 0;
+    border-radius: var(--border--radius-16);
+    background-color: #fff;
+    > div {
+      padding: 0 25px;
+    }
+  }
+  .topWrapper {
+    border-radius: 0 0 var(--border--radius-16) var(--border--radius-16);
+  }
+  .statusWrap {
+    color: #878787;
+    font-size: 14px;
+  }
+}
+
+.status {
+  > span {
+    display: inline-block;
+    margin-bottom: 7px;
+  }
+}
+
+.restaurant {
+  align-items: center;
+  display: flex;
+
+  img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+
+    margin-right: 8px;
+  }
+
+  :global {
+    .MuiAvatar-root {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+    }
+  }
+}
+.buttonWrapper {
+  padding: 25px;
+  border-radius: var(--border--radius-16) var(--border--radius-16) 0 0;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eeeeee;
+  align-items: center;
+  @include phone-m {
+    align-items: flex-end;
+  }
+  .rateButton {
+    padding: 15px 27px;
+    float: right;
+    @include phone-m {
+      padding: 4px 20px;
+      height: 47px;
+    }
+    > span {
+      font-size: 14px;
+    }
+    svg {
+      margin-right: 7px;
+    }
+  }
+}
+.content {
+  > div:not(:last-child):not(.noBorder) {
+    border-bottom: 1px solid var(--color--gray-200);
+  }
+
+  .text {
+    span {
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 13px;
+      font-weight: 400;
+      opacity: 0.7;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 237px;
+      @include phone-m {
+        width: 215px;
+      }
+    }
+  }
+
+  .item {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 13px;
+    cursor: pointer;
+    @include phone-m {
+      display: block;
+    }
+
+    .food {
+      display: flex;
+
+      img {
+        border-radius: 12px;
+        width: 48px;
+        height: 48px;
+        margin-right: 15px;
+      }
+    }
+
+    p {
+      margin: 8px 0;
+    }
+
+    .price {
+      text-align: right;
+      width: 150px;
+      @include phone-m {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        flex-direction: row-reverse;
+      }
+
+      span {
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      p {
+        font-size: 13px;
+        font-weight: 400;
+        @include phone-m {
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+
+  .tracing {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include phone-m {
+      display: block;
+    }
+
+    span {
+      font-size: 14px;
+      font-weight: 400;
+      opacity: 0.6;
+      margin-right: 11px;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      display: inline;
+      @include phone-m {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.right {
+  .wrapper:first-child {
+    margin-top: 0;
+  }
+  width: 285px;
+  @include phone-m {
+    width: 100%;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .tracingRight {
+    span {
+      font-size: 14px;
+      font-weight: 400;
+      opacity: 0.6;
+    }
+
+    p {
+      margin-top: 6px;
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+
+  .informationItems {
+    align-items: center;
+  }
+
+  .informationItems:not(:first-child) {
+    padding-top: 15px;
+  }
+
+  .informationItems:not(:last-child) {
+    padding-bottom: 17px;
+  }
+
+  .track {
+    > div {
+      align-items: center;
+      display: flex;
+
+      color: var(--color--green-100);
+      cursor: pointer;
+
+      margin-top: 6px;
+
+      svg {
+        position: relative;
+        margin-left: 7px;
+
+        top: 2px;
+        transition: all 0.23s ease;
+      }
+
+      &:hover {
+        svg {
+          transform: translateX(5px);
+        }
+      }
+    }
+  }
+
+  .header {
+    display: flex;
+
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--color--gray-200);
+
+    svg {
+      margin-right: 15px;
+    }
+
+    .paid {
+      padding-bottom: 20px;
+
+      p {
+        margin-top: 8px;
+      }
+
+      span {
+        font-size: 14px;
+        font-weight: 700;
+
+        display: block;
+        margin-top: -2px;
+      }
+    }
+  }
+
+  .summaryItems {
+    padding-bottom: 15px;
+  }
+
+  .summary {
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding-top: 15px;
+
+    p {
+      opacity: 0.7;
+    }
+  }
+
+  .total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+
+    span {
+      font-size: 14px;
+      font-weight: 700;
+    }
+  }
+
+  .information {
+    margin-bottom: 20px;
+
+    p {
+      font-size: 18px;
+      font-weight: 700;
+    }
+  }
+}
+
+.flexB {
+  display: flex;
+  span:first-child {
+    margin-right: 4px;
+  }
+}
+
+html[lang='ar'] .order .left {
+  margin-left: 20px;
+  margin-right: unset;
+}
+
+html[lang='ar'] .order .rateButton > span {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+html[lang='ar'] .item .food img {
+  margin-left: 15px;
+  margin-right: unset;
+}
+
+html[lang='ar'] .item .price {
+  text-align: left;
+}
+
+html[lang='ar'] .right .header svg {
+  margin-left: 15px;
+  margin-right: unset;
+}
+html[lang='ar'] .flexB {
+  display: flex;
+  flex-direction: row-reverse;
+}

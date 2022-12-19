@@ -1,0 +1,17 @@
+@import 'styles/mixins/card';
+
+.topInfo {
+  margin: 50px auto 0;
+  text-align: center;
+
+  h3 {
+    margin-bottom: 30px;
+  }
+}
+
+.form {
+  @include card;
+  margin-right: 0;
+  padding: 40px;
+  margin-top: 40px;
+}

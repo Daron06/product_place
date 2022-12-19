@@ -1,0 +1,58 @@
+@import 'styles/media';
+
+.catsWrapper {
+  margin-bottom: 40px;
+  letter-spacing: 0.05em;
+  width: 243px;
+  min-width: 243px;
+  @include phone-lg {
+    width: 100%;
+    min-width: 100%;
+  }
+}
+
+.isDrawer {
+  margin-bottom: 0;
+  .bottomNavItem {
+    position: absolute;
+    left: 40px;
+    top: 45px;
+    display: flex;
+    align-items: center;
+    span {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 100%;
+      color: #373737;
+      margin-left: 12px;
+      display: none;
+    }
+    cursor: pointer;
+    @include phone-lg {
+      left: 0;
+      top: 90px;
+      .arrow {
+        display: none;
+      }
+    }
+  }
+}
+
+.isMobileDrawer {
+  background: #fafafa;
+  border: 1px solid #eeeeee;
+  height: 46px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  margin: 0 20px;
+  span {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    color: #373737;
+    margin: 0 auto 0 12px;
+  }
+}

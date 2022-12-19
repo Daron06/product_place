@@ -1,0 +1,38 @@
+.status {
+  p {
+    text-transform: capitalize;
+    margin: 0;
+    padding: 5px 10px;
+    font-size: 14px !important;
+  }
+
+  :global {
+    .pending {
+      color: #ff544a;
+      background-color: #fff0ef;
+      border-radius: var(--border--radius-6);
+      min-width: 138px;
+      text-align: center;
+      font-size: 12px !important;
+      min-width: 142px;
+    }
+
+    .approved {
+      color: var(--color--success-main);
+      background-color: var(--color--success-light);
+      border-radius: var(--border--radius-6);
+    }
+
+    .declined {
+      color: #ff544a;
+      background-color: #fff0ef;
+      border-radius: var(--border--radius-6);
+    }
+
+    .processing {
+      color: #917c12;
+      background-color: var(--color--primary-light);
+      border-radius: var(--border--radius-6);
+    }
+  }
+}

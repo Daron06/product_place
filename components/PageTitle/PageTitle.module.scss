@@ -1,0 +1,16 @@
+@import 'styles/media';
+
+.pageTitle {
+  margin-bottom: var(--spacing--40);
+  font-size: 2.625rem;
+  font-weight: bold;
+  letter-spacing: -0.8px;
+  color: var(--color--gray-900);
+
+  @include tablets {
+    padding: 0 20px;
+  }
+  @include phone-lg {
+    padding: 0;
+  }
+}

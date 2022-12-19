@@ -1,0 +1,14 @@
+.optionEditingForm {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.optionEditingFormActions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.listItem {
+  padding-top: 0 !important;
+}

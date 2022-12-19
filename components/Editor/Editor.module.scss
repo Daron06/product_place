@@ -1,0 +1,26 @@
+.editorRoot {
+  border: 1px solid #eeeeee;
+  border-radius: 8px;
+  :global {
+    .ck.ck-toolbar {
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.06);
+      background: white;
+      height: 56px;
+    }
+    .ck.ck-editor__main > .ck-editor__editable {
+      background: none;
+    }
+    .ck .ck-toolbar_grouping {
+      border: none;
+    }
+    .ck.ck-editor__main > .ck-editor__editable:not(.ck-focused) {
+      border: none;
+    }
+    .ck-editor__editable {
+      min-height: 300px;
+    }
+    .ck.ck-editor {
+      overflow: hidden;
+    }
+  }
+}

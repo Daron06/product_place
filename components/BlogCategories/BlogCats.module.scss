@@ -1,0 +1,46 @@
+.lastItem {
+  color: var(--color--gray-600);
+}
+
+.catsWrapper {
+  border-bottom: 1px solid #eeeeee;
+  margin-bottom: 40px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #737373;
+  display: flex;
+  .catsLink {
+    color: #737373;
+    margin-right: 40px;
+    padding: 18px 0;
+    display: block;
+    position: relative;
+    &:hover {
+      text-decoration: none;
+      color: #373737;
+    }
+
+    span {
+      display: block;
+      position: absolute;
+      bottom: -1px;
+      height: 3px;
+      width: 40%;
+      background-color: #ffdf36;
+      overflow: hidden;
+      max-width: 0;
+      transition: max-width 0.25s ease-out;
+      -webkit-transition: max-width 0.25s ease-out;
+    }
+    &.active,
+    &:hover {
+      span {
+        max-width: 40%;
+        transition: max-width 0.25s ease-in;
+      }
+    }
+  }
+  h6 {
+    font-size: 14px !important;
+  }
+}

@@ -1,0 +1,240 @@
+@import '../../styles/media';
+
+.header {
+  padding: var(--spacing--30) 0;
+
+  @include phone-m {
+    padding: var(--spacing--20) 0;
+  }
+
+  @include phone-m {
+    :global {
+      .MuiButton-text {
+        font-size: 14px !important;
+      }
+    }
+  }
+}
+
+.headerContainer {
+  overflow: hidden;
+  padding: 0 130px;
+  width: 100%;
+  @include phone-lg {
+    padding: 0 20px;
+  }
+  @include phone-m {
+    padding: 0;
+  }
+}
+
+.headerWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include phone-m {
+    padding: 0 20px;
+
+    button {
+      box-shadow: none !important;
+    }
+  }
+  .regButton,
+  .loginButton {
+    @include phone-m {
+      display: none;
+    }
+  }
+}
+
+html[dir='rtl'] .logo {
+  margin-right: 40px;
+  margin-left: 15px;
+}
+
+.changeLangButton {
+  font-weight: bold !important;
+  font-family: var(--font--family--base) !important;
+}
+
+.logo {
+  position: relative;
+  left: 7px;
+  top: 1px;
+  width: 110px;
+  height: 34px;
+  @include phone-m {
+    width: 80px;
+    height: 24px;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.headerMenu {
+  display: flex;
+  align-items: center;
+}
+.menuButtonWideScreens {
+  @include phone-m {
+    display: none;
+  }
+}
+
+.menuButtonSmallScreens {
+  display: none;
+  @include phone-m {
+    display: block;
+    margin-left: 40px;
+  }
+}
+
+.menuButton {
+  margin-right: var(--spacing--30);
+  padding: 0;
+  width: max-content;
+  height: max-content;
+  font-size: 27px;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+
+  svg {
+    width: 1em;
+    height: 1em;
+    display: flex;
+    stroke: var(--color--brow-text);
+  }
+}
+
+.headerButton {
+  height: 45px !important;
+}
+
+.loginButton {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--color--brow-text);
+  cursor: pointer;
+  min-width: 80px !important;
+}
+
+.signUpButton {
+  height: 45px;
+  width: 105px;
+  margin-left: var(--spacing--10) !important;
+  background-color: #fff;
+}
+
+.signUpButtonLabel {
+  color: var(--color--gray-900) !important;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.cartButton {
+  height: 45px;
+  position: relative;
+  top: -1px;
+  @include phone-m {
+    display: none;
+  }
+}
+
+.cartButtonPlaceholder {
+  width: 40px;
+  position: relative;
+  top: 12px;
+  left: -1px;
+}
+
+.headerUserProfile {
+  display: flex;
+  align-items: center;
+
+  svg {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.cartIcon {
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.bottomNavItem {
+  display: flex;
+  flex-direction: column;
+  > span {
+    color: #8b8b8b;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0em;
+  }
+}
+
+.userProfileButton {
+  margin: 0 5px !important;
+
+  :global {
+    .MuiBadge-badge {
+      background-color: #fff !important;
+    }
+  }
+}
+
+.headerWhite {
+  border-bottom: 1px solid var(--color--gray-200);
+
+  :global {
+    .signup-button {
+      background-color: var(--color--primary-main);
+    }
+    .cart-badge {
+      .MuiBadge-badge {
+        background-color: var(--color--primary-main) !important;
+        color: black;
+      }
+    }
+  }
+}
+
+.userAvatar {
+  margin: 0 5px 0 22px;
+  padding: 0 12px;
+
+  @include phone-m {
+    display: none;
+  }
+}
+
+.userNotification {
+  margin-left: 13px;
+}
+.langButtonWrapper {
+  margin-left: 30px;
+}
+html[lang='ar'] .userNotification {
+  margin-left: unset;
+}
+
+@media (max-width: 576px) {
+  html[lang='ar'] .langButtonWrapper {
+    margin-left: unset;
+  }
+
+  html[lang='ar'] .menuButtonSmallScreens {
+    margin-left: 10px;
+  }
+}

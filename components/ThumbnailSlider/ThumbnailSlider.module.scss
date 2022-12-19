@@ -1,0 +1,111 @@
+@import 'styles/media';
+
+.sliderBlock {
+  margin-bottom: var(--spacing--20);
+  flex: 1 1 auto;
+  border-radius: var(--border--radius-16);
+  overflow: hidden;
+  @include phone-lg {
+    border-radius: 0;
+  }
+}
+
+.sliderMain {
+  width: 100%;
+  margin-bottom: var(--spacing--20);
+  display: flex;
+  border-radius: var(--border--radius-16);
+  overflow: hidden;
+
+  @media (min-width: 1200px) {
+    height: 570px;
+  }
+  @include phone-lg {
+    border-radius: 0;
+  }
+
+  @include phone-m {
+    height: 400px;
+  }
+
+  :global {
+    @media (max-width: 768px) {
+      .mobileSliderDots {
+        display: flex !important;
+        height: 30px;
+        opacity: 1;
+      }
+    }
+  }
+
+  & * {
+    height: 100%;
+  }
+}
+
+.mainSlideItem {
+  max-width: 570px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.sliderThumbs {
+  :global {
+    .slick-slide.slick-active.slick-current {
+      :local {
+        .slideThumbItem {
+          position: relative;
+          box-shadow: 0 0 0 2px var(--color--primary-main);
+
+          &:before {
+            content: ' ';
+            position: absolute;
+            z-index: 1100;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            margin: auto;
+            background-color: rgba(#fff, 0.7);
+          }
+        }
+      }
+    }
+
+    .slick-list {
+      margin-right: -5px;
+      padding-top: 2px;
+      padding-left: 2px;
+    }
+
+    .slick-track {
+      margin: 0;
+    }
+  }
+  @include phone-lg {
+    display: none;
+  }
+}
+
+.slideThumbBox {
+  padding-right: 10px;
+}
+
+.slideThumbItem {
+  width: 105px;
+  height: 105px;
+  border-radius: var(--border--radius-8);
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  @include phone-lg {
+    border-radius: 0;
+  }
+}

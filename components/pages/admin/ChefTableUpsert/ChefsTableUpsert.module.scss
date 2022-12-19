@@ -1,0 +1,137 @@
+.root {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  align-items: flex-start;
+  column-gap: var(--spacing--30);
+  row-gap: var(--spacing--20);
+}
+
+.rootSection {
+  grid-column: 1/4;
+}
+
+.rootAside {
+  display: grid;
+  grid-template-rows: max-content;
+  row-gap: var(--spacing--20);
+  align-items: self-start;
+}
+
+.chefName {
+  margin-top: 2px;
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0em;
+}
+
+.chefDesc {
+  opacity: 0.6;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 13px;
+  letter-spacing: 0px;
+}
+
+.statusApprovation {
+  opacity: 0.6;
+  font-size: 14px;
+}
+
+.approvedStatus {
+  margin-left: 6px;
+  font-weight: bold;
+}
+
+.blockTitle {
+  margin-bottom: var(--spacing--20) !important;
+  font-size: 1.125rem !important;
+  font-weight: bold !important;
+}
+
+.thumb[data-index='0'] .thumbWrapper {
+  right: -10px;
+}
+
+.thumb[data-index='1'] .thumbWrapper {
+  left: -10px;
+}
+
+.sliderMarks {
+  background-color: #e0e0e0 !important;
+  height: 15px !important;
+  width: 1px !important;
+  margin-top: -15px !important;
+
+  &:nth-child(even) {
+    height: 8px !important;
+    margin-top: -12px !important;
+  }
+}
+
+.priceBlock {
+  position: relative;
+}
+
+.priceInput {
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+.endAdornment {
+  position: absolute;
+  top: calc(50% - 10px);
+  right: 15px;
+  color: #a0a0a0 !important;
+}
+
+.priceInput {
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+.thumbWrapper {
+  position: absolute;
+  top: -26px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  width: max-content;
+}
+
+.thumb {
+  font-size: 13px;
+}
+
+.videoBlock {
+  display: flex;
+  align-items: center;
+  background: var(--color--gray-150);
+  border: 1px solid var(--color--gray-200);
+  box-sizing: border-box;
+  border-radius: 12px;
+  padding: 30px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.videoTitle {
+  font-size: 18px !important;
+  margin-bottom: 5px !important;
+}
+
+.videoRecipeText {
+  font-size: 14px !important;
+}
+
+.disabledItem {
+  pointer-events: none;
+  opacity: 0.5;
+}

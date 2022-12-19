@@ -1,0 +1,34 @@
+@import 'styles/media';
+
+.filtersList {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -5px;
+  margin-right: -5px;
+
+  @include phone-m {
+    flex-wrap: nowrap;
+    overflow: auto;
+  }
+
+  :global {
+    .MuiChip-root {
+      margin-left: 5px;
+      margin-right: 5px;
+      margin-bottom: 10px;
+
+      @include phone-m {
+        margin-right: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.filtersWrapper {
+  flex-wrap: wrap;
+  display: flex;
+  @include phone-m {
+    display: block;
+  }
+}

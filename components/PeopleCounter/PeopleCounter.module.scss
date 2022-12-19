@@ -1,0 +1,10 @@
+.item {
+  & + .item {
+    margin-top: 25px;
+  }
+}
+
+.key {
+  text-transform: capitalize;
+  font-size: 1rem !important;
+}

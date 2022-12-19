@@ -1,0 +1,62 @@
+.wrapper {
+  border-radius: 16px;
+  padding-top: 30px;
+  background-color: #fff;
+}
+
+.tableRow {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+
+  > div {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      font-weight: 600;
+      font-size: 12px;
+    }
+  }
+}
+
+.headText {
+  font-weight: 600 !important;
+}
+
+.tableCell {
+  font-size: 16px !important;
+  &:first-child {
+    padding-left: 30px !important;
+    @media (max-width: 577px) {
+      padding-left: 20px !important;
+    }
+  }
+}
+.ml30 {
+  margin-left: 30px;
+}
+html[lang='ar'] .ml30 {
+  margin-left: unset;
+  margin-right: 30px;
+}
+html[lang='ar'] .staffOrderInfoTable,
+html[lang='ar'] .tableHead {
+  width: 100%;
+}
+html[lang='ar'] .tableHead th {
+  text-align: right;
+}
+html[lang='ar'] .tableCell {
+  padding-left: 16px !important;
+  padding-right: 30px;
+}
+@media (max-width: 576px) {
+  .ml30 {
+    margin-left: 20px;
+  }
+  html[lang='ar'] .ml30 {
+    margin-right: 20px;
+  }
+}

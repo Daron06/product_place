@@ -1,0 +1,48 @@
+@import 'styles/media';
+
+.mapContainer {
+  height: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  position: relative;
+
+  & > div {
+    height: 100%;
+  }
+}
+
+.input {
+  z-index: 1;
+  border: 0;
+  padding: 12px;
+  font-size: 14px;
+  width: 250px;
+}
+
+.searchPopup {
+  position: absolute;
+  z-index: 1;
+  top: 20px;
+  right: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.list {
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.googleMapSearchInput {
+  padding: 13px 15px;
+  width: 400px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  @include phone-lg {
+    max-width: 280px;
+  }
+}

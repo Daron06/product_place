@@ -1,0 +1,80 @@
+.wrapper {
+  padding: 30px;
+}
+
+.backButton {
+  min-width: auto !important;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px !important;
+  border: 1px solid var(--color--gray-200) !important;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+
+  :global {
+    h4 {
+      font-weight: 700;
+      margin-left: 20px;
+      font-size: 26px;
+    }
+  }
+}
+
+.headTitle {
+  display: flex;
+  align-items: center;
+}
+
+.formLabel {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.button {
+  font-weight: bold !important;
+  font-size: 16px !important;
+  width: 100px !important;
+
+  :global {
+    circle {
+      color: #fff;
+    }
+  }
+}
+
+.whiteBlock {
+  background-color: #fff;
+  padding: 20px 25px;
+  border-radius: 16px;
+  margin-top: 30px;
+
+  :global {
+    h6 {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.specificationsFields {
+  display: flex;
+  align-items: center;
+}
+
+.specificationsField {
+  margin-right: 20px;
+}
+
+.leftSide {
+  flex: 0 0 75%;
+}
+
+.rightSide {
+  flex: 1;
+}

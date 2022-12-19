@@ -1,0 +1,29 @@
+.sliderWrapper {
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.popoverBody {
+  overflow: visible;
+}
+
+.thumbWrapper {
+  margin-top: 50px;
+}
+
+.thumb {
+  display: inline-block;
+  min-width: max-content;
+  font-weight: normal;
+  font-size: 13px;
+  color: var(--color--gray-900);
+}
+
+.rightThumb {
+  float: right;
+}
+
+.slider {
+  max-width: 250px;
+}
